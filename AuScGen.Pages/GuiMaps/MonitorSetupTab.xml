@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Monitor Setup Tab Controls">
+    <Element name="tabMonitorSetup" type="HtmlControl">
+      <id>tabMonitorSetup</id>
+    </Element>
+    <Element name="btnAddMonitor" type="HtmlButton">
+      <id>btnAddMonitor</id>
+    </Element>
+    <Element name="txtDashboardName" type="HtmlInputText">
+      <id>txtDashboardName</id>
+    </Element>
+    <Element name="ddlDashboardType" type="HtmlSelect">
+      <id>ddlDashboardType</id>
+    </Element>
+    <Element name="cbEnableParameter" type="HtmlInputCheckBox">
+      <id>cbEnableParameter</id>
+    </Element>
+    <Element name="cbCustomer" type="HtmlInputCheckbox">
+      <id>cbCustomer</id>
+    </Element>
+    <Element name="cbFormula" type="HtmlInputCheckbox">
+      <id>cbFormula</id>
+    </Element>
+    <Element name="cbLoad" type="HtmlInputCheckbox">
+      <id>cbLoad</id>
+    </Element>
+    <Element name="cbDisplayonLogin" type="HtmlInputCheckbox">
+      <id>cbDisplayonLogin</id>
+    </Element>
+    <Element name="btnUpdate" type="HtmlButton">
+      <id>btnUpdate</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="lblMessage" type="HtmlControl">
+      <xpath>.//*[@id='tabMonitorSetupContainer']/div[1]/label</xpath>
+    </Element>
+    <Element name="monitorGrid" type="EcolabDataGrid">
+      <id>tblMonitorSetUp</id>
+    </Element>
+    <Element name="duplicateMessage" type="HtmlControl">
+      <class>divMsg</class>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

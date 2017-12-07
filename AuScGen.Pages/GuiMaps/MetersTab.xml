@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+
+  <FeatureSet name="Meters Tab Controls">
+    <Element name="btnAddMeter" type="HtmlControl">
+      <xpath>.//*[@id='gridMeter']/div[1]/a</xpath>
+    </Element>
+    <Element name="txtMeterName" type="HtmlControl">
+      <id>txtDescription</id>
+    </Element>
+    <Element name="ddlUtilityType" type="HtmlControl">
+      <id>ddlUtilityTypeAdd</id>
+    </Element>
+    <Element name="ddlUtilityLocation" type="HtmlControl">
+      <id>ddlUtilityLocationAdd</id>
+    </Element>
+    <Element name="ddlMachineCompartment" type="HtmlControl">
+      <id>ddlMachineCompartmentAdd</id>
+    </Element>
+    <Element name="ddlParent" type="HtmlControl">
+      <id>ddlParentAdd</id>
+    </Element>
+    <Element name="txtCalibration" type="HtmlControl">
+      <id>txtCalibrationAdd</id>
+    </Element>
+    <Element name="ddlUOM" type="HtmlControl">
+      <id>ddlUOMAdd</id>
+    </Element>
+    <Element name="ddlController" type="HtmlControl">
+      <id>ddlControllerAdd</id>
+    </Element>
+    <Element name="ddlControllerLabel" type="HtmlControl">
+      <id>ddlController</id>
+    </Element>
+    <Element name="ddlAllowManualEntryEdit" type="HtmlControl">
+      <id>ddlAllowManualEntry</id>
+    </Element>
+    <Element name="txtMaxValueLimit" type="HtmlControl">
+      <id>txtMaxValueLimitAdd</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlControl">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="btnSaveMeter" type="HtmlControl">
+      <id>btnUpdate</id>
+    </Element>
+    <Element name="btnEditCancel" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[30]/button[2]</xpath>
+    </Element>
+    <Element name="btnEditSave" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[30]/button[1]</xpath>
+    </Element>
+    <Element name="lblMeterAddedSuccess" type="HtmlControl">
+      <id>errorDiv</id>
+    </Element>
+    <Element name="lblErrorMessage" type="HtmlControl">
+      <class>k-success-message</class>
+    </Element>
+    <Element name="MetersTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridMeter']/div[3]/table</xpath>
+    </Element>
+    <Element name="MetersEditLabel" type="HtmlLabel">
+      <xpath>//span[contains(text(),'Edit Meter')]</xpath>
+    </Element>
+    <Element name="MetersViewLabel" type="HtmlLabel">
+      <xpath>//span[contains(text(),'View Meter')]</xpath>
+    </Element>
+    <Element name="UserRolesMetersTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridMeter']/div[2]/table</xpath>
+    </Element>
+    <Element name="YesNoSwitch" type="HtmlSpan">
+      <xpath>.//*[@id='frmPlantSetupDetails']/div[2]/div[1]/div[7]/div[2]/span/span[2]/span</xpath>
+    </Element>
+    <Element name="ddlAllowManualEntryAdd" type="HtmlInputCheckBox">
+      <id>ddlAllowManualEntryAdd</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

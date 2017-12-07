@@ -1,0 +1,25 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_WashersMigrationData" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>Washers</TableName>
+      <UniqueId>washer</UniqueId>
+      <Fields>Brand,Size</Fields>
+      <Query>
+        select washers.washer,washers.Description,washers.Brand,washers.size
+        from washers,lfs_washers where washers.washer=lfs_washers.washer 
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.MachineSetUp</TableName>
+      <UniqueId>PlantWasherNumber</UniqueId>
+      <Fields>Brand,Size</Fields>
+      <Query>
+        SELECT w.washerid,w.PlantWasherNumber,m.MachineName,m.Brand,m.Size
+        FROM TCD.Washer W
+        INNER JOIN tcd.MachineSetup m on w.WasherId=m.WasherId and w.Is_Deleted=0
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

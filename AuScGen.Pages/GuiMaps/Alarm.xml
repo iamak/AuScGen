@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Alarm Page">
+    <Element name="lnkAlarm" type="HtmlControl">
+      <id>lnkAlarm</id>
+    </Element>
+    <Element name="divAlarmCountContainer" type="HtmlControl">
+      <xpath>.//*[@id='divAlarmCountContainer']/div</xpath>
+    </Element>
+    <Element name="btnClose" type="HtmlControl">
+      <xpath>//button[contains(text(),'Close')]</xpath>
+    </Element>
+    <Element name="AlarmTableGrid" type="HtmlControl">
+      <xpath>.//*[@id='frmAlarm']/div/table</xpath>
+    </Element>
+    <Element name="AlarmPopupTitle" type="HtmlControl">
+      <xpath>.//*[@id='myModalLabel']/span</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

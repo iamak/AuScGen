@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a66c42a0-79dc-4a6a-aaa4-d844ec8bf4d2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.16.104.196:1275/BeckhoffService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BeckhoffService.xsd" MetadataType="Schema" ID="bc2da6e3-9982-4259-92ad-1ca35f47b8ce" SourceId="1" SourceUrl="http://hyd-gudibandi.alliance-consulting.com:1275/BeckhoffService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BeckhoffService1.xsd" MetadataType="Schema" ID="73baf9b4-3ca9-4b65-ad95-39f06f3f6d49" SourceId="1" SourceUrl="http://hyd-gudibandi.alliance-consulting.com:1275/BeckhoffService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BeckhoffService2.xsd" MetadataType="Schema" ID="7ed774e9-9f15-42c4-bd7c-ae994c23c64a" SourceId="1" SourceUrl="http://hyd-gudibandi.alliance-consulting.com:1275/BeckhoffService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BeckhoffService.wsdl" MetadataType="Wsdl" ID="268cf3d4-966c-4eab-b77f-575b489c59db" SourceId="1" SourceUrl="http://hyd-gudibandi.alliance-consulting.com:1275/BeckhoffService.svc?wsdl" />
+    <MetadataFile FileName="BeckhoffService.disco" MetadataType="Disco" ID="44df3693-b557-48ca-9385-87b0f7b1acfe" SourceId="1" SourceUrl="http://hyd-gudibandi.alliance-consulting.com:1275/BeckhoffService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

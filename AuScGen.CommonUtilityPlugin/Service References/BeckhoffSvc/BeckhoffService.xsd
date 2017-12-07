@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BeckhoffTagReader" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BeckhoffTagReader" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfBeckhoffTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BeckhoffTag" nillable="true" type="tns:BeckhoffTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeckhoffTag" nillable="true" type="tns:ArrayOfBeckhoffTag" />
+  <xs:complexType name="BeckhoffTag">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Tag">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NotificationHandle" type="xs:int" />
+          <xs:element minOccurs="0" name="indexGroup" type="xs:int" />
+          <xs:element minOccurs="0" name="indexOffset" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BeckhoffTag" nillable="true" type="tns:BeckhoffTag" />
+  <xs:complexType name="Tag">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Quality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TagId" type="xs:int" />
+      <xs:element minOccurs="0" name="TagType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TagTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeStamp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tag" nillable="true" type="tns:Tag" />
+</xs:schema>

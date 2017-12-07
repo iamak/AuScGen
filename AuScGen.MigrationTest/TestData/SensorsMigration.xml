@@ -1,0 +1,41 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifySensorMigration" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>meters</TableName>
+      <UniqueId>Description</UniqueId>
+      <Fields>Description,uofm</Fields>
+      <Query>select * from meters where metertype not in ('Gas','Water','Electric') and description !='Spare'</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.Sensor</TableName>
+      <UniqueId>Description</UniqueId>
+      <Fields>description,uom</Fields>
+      <Query>
+        select Description,
+        case uom
+        when 'minute' then 'Minutes '
+        end as UOM from tcd.Sensor
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC02_VerifySensorReadings" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>meterdata</TableName>
+      <UniqueId>timestamp</UniqueId>
+      <Fields>tmestamp,reading</Fields>
+      <Query>select meters.meterid,meterdata.timestamp,meterdata.reading from meterdata,meters where meters.metertype not in ('Gas','Water','Electric') and meters.description !='Spare'</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.SensorReading</TableName>
+      <UniqueId>timestamp</UniqueId>
+      <Fields>tmestamp,reading</Fields>
+      <Query>
+        select timestamp,reading from tcd.SensorReading
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

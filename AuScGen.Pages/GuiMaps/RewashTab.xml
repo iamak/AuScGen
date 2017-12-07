@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Manual Inputs - Rewash Tab Controls">
+    <Element name="tabRewash" type="HtmlControl">
+      <id>tabManualRewash</id>
+    </Element>
+    <Element name="tabProduction" type="HtmlControl">
+      <id>tabProduction</id>
+    </Element>
+    <Element name="tabUtility" type="HtmlControl">
+      <id>tabUtility</id>
+    </Element>
+    <Element name="tabLabour" type="HtmlControl">
+      <id>tabLabour</id>
+    </Element>
+    <Element name="tabProductionData" type="HtmlControl">
+      <id>tabProductionData</id>
+    </Element>
+    <Element name="ddlWasherGroup" type="HtmlControl">
+      <id>ddlWasherGroup</id>
+    </Element>
+    <Element name="ddlLocation" type="HtmlControl">
+      <id>ddlLocation</id>
+    </Element>
+    <Element name="ddlFormula" type="HtmlControl">
+      <id>ddlFormula</id>
+    </Element>
+    <Element name="ddlRewashReason" type="HtmlControl">
+      <id>ddlRewashReason</id>
+    </Element>
+    <Element name="allowRewashSwitch" type="HtmlControl">
+      <class>km-switch-handle</class>
+    </Element>
+    <Element name="allowRewashContainer" type="HtmlControl">
+      <class>km-switch-container</class>
+    </Element>
+    <Element name="yesSwitch" type="HtmlControl">
+      <class>km-switch-label-on</class>
+    </Element>
+    <Element name="noSwitch" type="HtmlControl">
+      <class>km-switch-label-off</class>
+    </Element>
+    <Element name="txtDatabaseExportPath" type="HtmlControl">
+      <id>txtexportpath</id>
+    </Element>
+    <Element name="txtLastDate" type="HtmlControl">
+      <id>txtLastDate</id>
+    </Element>
+    <Element name="txtNewDate" type="HtmlControl">
+      <id>txtNewDate</id>
+    </Element>
+    <Element name="txtLastValue" type="HtmlControl">
+      <id>txtLastValue</id>
+    </Element>
+    <Element name="txtNewValue" type="HtmlControl">
+      <id>txtNewValue</id>
+    </Element>
+    <Element name="btnSave" type="HtmlControl">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="divErrorMsg" type="HtmlControl">
+      <class>divErrorMsg</class>
+    </Element>
+    <Element name="txtDataLiveTime" type="HtmlControl">
+      <class>txtDataLiveTime</class>
+    </Element>
+    <Element name="allowSwitch" type="HtmlControl">
+      <xpath>.//*[@id='frmPlantSetupDetails']/div[2]/div[1]/div[7]/div[2]/span/span[2]</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

@@ -1,0 +1,20 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyDryersFormsData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>DryerForms</TableName>
+      <UniqueId>DryerId</UniqueId>
+      <Fields>DryerId,Formula,Description,TargetMins,UnderMins,OverMins,TargetGas,Target_Wt,DataType,CustId,EmpId,SoilId</Fields>
+      <Query>Select DryerId,Formula,Description,TargetMins,UnderMins,OverMins,TargetGas,Target_Wt,DataType,CustId,EmpId,SoilId
+  from DryersForms</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>DryerForms</TableName>
+      <UniqueId>DryerID</UniqueId>
+      <Fields>DryerId,Formula,Description,TargetMins,UnderMins,OverMins,TargetGas,Target_Wt,DataType,CustId,EmpId,SoilId</Fields>
+      <Query>Select DryerId,Formula,Description,TargetMins,UnderMins,OverMins,TargetGas,Target_Wt,DataType,CustId,EmpId,SoilId
+  rom DryerForms</Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

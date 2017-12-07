@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Landing Page">
+    <Element name="MainTray" type="HtmlControl">
+      <id>navbar</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

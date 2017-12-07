@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Manual Inputs - Production Tab Controls">
+    <Element name="tabProduction" type="HtmlControl">
+      <id>tabProduction</id>
+    </Element>
+    <Element name="tabProductionData" type="HtmlControl">
+      <id>tabProductionData</id>
+    </Element>
+    <Element name="tabBatchData" type="HtmlControl">
+      <id>tabBatchData</id>
+    </Element>
+    <Element name="ddlWasherGroup" type="HtmlSelect">
+      <id>ddlWasherGroup</id>
+    </Element>
+    <Element name="ddlWasher" type="HtmlSelect">
+      <id>ddlWasher</id>
+    </Element>
+    <Element name="ddlFormula" type="HtmlSelect">
+      <id>ddlFormula</id>
+    </Element>
+    <Element name="newValueUOM" type="HtmlControl">
+      <xpath>.//*[@id='tblMIProduction']/tbody/tr[1]/td[3]/div/span</xpath>
+    </Element>
+    <Element name="txtNewValue" type="HtmlInputText">
+      <id>txtNewValue</id>
+    </Element>
+    <Element name="btnSave" type="HtmlButton">
+      <id>btnSave</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="txtLastValue" type="HtmlInputText">
+      <id>txtLastValue</id>
+    </Element>
+    <Element name="lastValueUOM" type="HtmlSelect">
+      <xpath>.//*[@id='tblMIProduction']/tbody/tr[2]/td[3]/div/span</xpath>
+    </Element>
+    <Element name="btndeleteLastValue" type="HtmlSelect">
+      <xpath>.//*[@id='tblMIProduction']/tbody/tr[1]/td[4]/a/span</xpath>
+    </Element>
+    <Element name="divErrorMsg" type="HtmlSelect">
+      <class>divErrorMsg</class>
+    </Element>
+    <Element name="batchDay" type="HtmlControl">
+      <xpath>//form[@id='frmManualBatch']/div/div/div[2]/div/div/span/span</xpath>
+    </Element>
+    <Element name="ddlBatch" type="HtmlSelect">
+      <id>ddlBatch</id>
+    </Element>
+    <Element name="startDate" type="HtmlInputText">
+      <id>startDate</id>
+    </Element>
+    <Element name="startTime" type="HtmlInputText">
+      <id>startTime</id>
+    </Element>
+    <Element name="recordingValue" type="HtmlInputText">
+      <id>recordingValue</id>
+    </Element>
+    <Element name="batchUOM" type="HtmlControl">
+      <xpath>.//*[@id='manualBatchDataContainer']/div[3]/div/div/span</xpath>
+    </Element>
+    <Element name="batchDatePicker" type="HtmlTable">
+      <xpath>.//div[@class='datepicker-days']/table</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

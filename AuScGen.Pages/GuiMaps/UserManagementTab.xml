@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="UserManagement Tab Page">
+    <Element name="tabUserManagement" type="HtmlControl">
+      <id>tabUserManagement</id>
+    </Element>
+    <Element name="UserManagementTable" type="HtmlControl">
+      <xpath>.//*[@id='tblUserManagement']</xpath>
+    </Element>
+    <Element name="AddUser" type="HtmlControl">
+      <xpath>//span[contains(text(),'Add User')]</xpath>
+    </Element>
+    <Element name="txtFirstName" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[3]/input</xpath>
+    </Element>
+    <Element name="txtLastName" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[5]/input</xpath>
+    </Element>
+    <Element name="txtUserId" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[7]/input</xpath>
+    </Element>
+    <Element name="txtEmail" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[9]/input</xpath>
+    </Element>
+    <Element name="txtContactNo" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[11]/input</xpath>
+    </Element>
+    <Element name="txtPassword" type="HtmlControl">
+      <id>txtPassword</id>
+    </Element>
+    <Element name="ddlUserRoleSelect" type="HtmlControl">
+      <id>ddlUserRole></id>
+    </Element>
+    <Element name="ddlUserRole" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[15]/span/select</xpath>
+    </Element>
+    <Element name="Save" type="HtmlControl">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="Cancel" type="HtmlControl">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>          
+    <Element name="userManagementMsgDiv" type="HtmlControl">
+      <id>userManagementErrorMsgDiv</id>
+    </Element>
+    <Element name="form-error" type="HtmlControl">
+      <id>form-error</id>
+    </Element>
+    <Element name="userErrorMsg" type="HtmlControl">
+      <id>userErrorMsg</id>
+    </Element>  
+    <Element name="txtFirstNameInLine" type="HtmlControl">
+      <id>txtFirstName</id>
+    </Element>
+
+
+    <Element name="txtEditFirstName" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[2]/input</xpath>
+    </Element>
+    <Element name="txtEditLastName" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[4]/input</xpath>
+    </Element>
+    <Element name="txtEditUserId" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[6]/input</xpath>
+    </Element>
+    <Element name="txtEditEmail" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[8]/input</xpath>
+    </Element>
+    <Element name="txtEditContactNo" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[10]/input</xpath>
+    </Element>
+    <Element name="txtEditPassword" type="HtmlControl">
+      <id>txtPassword</id>
+    </Element>
+    <Element name="ddlEditUserRole" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[14]/span/select</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

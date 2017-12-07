@@ -1,0 +1,18 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyPlantFormulasData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>dober_formulacodes</TableName>
+      <UniqueId>Fodescription</UniqueId>
+      <Fields>focode,fodescription</Fields>
+      <Query>Select focode,fodescription from dober_formulacodes</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>ProgramMaster</TableName>
+      <UniqueId>Name</UniqueId>
+      <Fields>programId,name</Fields>
+      <Query>Select ProgramID,name from TCD.ProgramMaster</Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Manual Inputs - Rewash Tab Controls">
+    <Element name="tabUtility" type="HtmlControl">
+      <id>tabUtility</id>
+    </Element>
+    <Element name="UtiltyTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='formManualUtility']/div[2]/table</xpath>
+    </Element>
+    <Element name="txtLastValue" type="HtmlControl">
+      <id>txtLastValue</id>
+    </Element>
+    <Element name="txtUsage" type="HtmlControl">
+      <id>txtUsage</id>
+    </Element>
+    <Element name="txtNewValue" type="HtmlControl">
+      <xpath>.//*[@id='frmAddEditManual']/div[12]/label/../../div[13]/label[2]/input</xpath>
+    </Element>
+    <Element name="txtNewUsage" type="HtmlControl">
+      <id>txtNewUsage</id>
+    </Element>
+    <Element name="btnUpdate" type="HtmlControl">
+      <id>btnUpdate</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlControl">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="userErrorMsg" type="HtmlControl">
+      <id>userErrorMsg</id>
+    </Element>
+    <Element name="divErrorMsg" type="HtmlControl">
+      <class>divErrorMsg</class>
+    </Element>
+    <Element name="lastRecordDeleteButton" type="HtmlControl">
+      <xpath>.//*[@id='frmAddEditManual']/div[13]/label[4]/a/span</xpath>
+    </Element>
+    <Element name="UOM" type="HtmlControl">
+      <id>txtUom</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

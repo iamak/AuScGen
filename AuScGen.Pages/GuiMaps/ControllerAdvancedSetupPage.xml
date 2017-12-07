@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Controller Advanced Setup Allen Bradely">
+    <Element name="txtFactorsMultiplierAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_7']/div[1]/div[1]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtInjectionQuantityMultiplierAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_7']/div[2]/div[1]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtMaxFormulaInjectionAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_7']/div[3]/div[1]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtOZSecondMultiplierAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_7']/div[1]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtMaxWashFormulasAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_7']/div[2]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtMaxWashFormulasAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_7']/div[2]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtNumberOfChemicalValvesAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_7']/div[3]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtWebPortPasswordAB" type="HtmlInputText">
+      <id>Input_Control_7_75</id>
+    </Element>
+    <Element name="txtWebPortIPAB" type="HtmlInputText">
+      <id>Input_Control_7_73</id>
+    </Element>
+    <Element name="txtWebPortLoginAB" type="HtmlInputText">
+      <id>Input_Control_7_74</id>
+    </Element>
+    <Element name="lblControllerName" type="HtmlControl">
+      <xpath>.//*[@id='frmControllerSetupDetails']/div[1]/div[1]/div[2]/label</xpath>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="Controller Advanced Setup Beckhoff">
+    <Element name="txtMaxWashFormulasBEC" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_8']/div[2]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtMaxFormulaInjectionBEC" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_8']/div[3]/div[1]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtNumberOfChemicalValvesBEC" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_8']/div[3]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtWebPortPasswordBEC" type="HtmlInputText">
+      <id>Input_Control_8_65</id>
+    </Element>
+    <Element name="txtWebPortIPBEC" type="HtmlInputText">
+      <id>Input_Control_8_63</id>
+    </Element>
+    <Element name="txtWebPortLoginBEC" type="HtmlInputText">
+      <id>Input_Control_8_64</id>
+    </Element>  
+  </FeatureSet>
+</ObjectRepository>

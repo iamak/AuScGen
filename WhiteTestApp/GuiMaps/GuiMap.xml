@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<GuiMap>
+  <UIItem Tool="White" LogicalName="Button9" FindBy="Text" FindString="9" ControlType="Button"></UIItem>
+  <UIItem Tool="White" LogicalName="Button7" FindBy="Text" FindString="7" ControlType="Button"></UIItem>
+  <UIItem Tool="White" LogicalName="Button5" FindBy="Text" FindString="5" ControlType="Button"></UIItem>
+  <UIItem Tool="White" LogicalName="Button4" FindBy="Text" FindString="4" ControlType="Button"></UIItem>
+  <UIItem Tool="White" LogicalName="AddButton" FindBy="Text" FindString="Add" ControlType="Button"></UIItem>
+  <UIItem Tool="White" LogicalName="EqualButton" FindBy="Text" FindString="Equals" ControlType="Button"></UIItem>
+  <UIItem Tool="White" LogicalName="ResultField" FindBy="Id" FindString="150" ControlType="Label"></UIItem>
+  <UIItem Tool="White" LogicalName="ClearEntry" FindBy="Id" FindString="82" ControlType="Button"></UIItem>
+  <UIItem Tool="White" LogicalName="SubtractButton" FindBy="Text" FindString="Subtract" ControlType="Button"></UIItem>
+  
+  <UIItem Tool="White" LogicalName="Form1Pane" FindBy="Id" FindString="groupBox1" ControlType="Button"></UIItem>
+  <UIItem Tool="White" LogicalName="Form1Button" FindBy="Id" FindString="buttonInGroupBox" ControlType="Button"></UIItem>
+</GuiMap>-->
+<ObjectRepository>
+  <FeatureSet name="Calculator Application Controls">
+    <UIItem name="Button9" ControlType="Button">
+      <Text>9</Text>
+      <Id>139</Id>
+    </UIItem>
+    <UIItem name="Button7" ControlType="Button">
+      <Text>7</Text>
+    </UIItem>
+    <UIItem name="Button5" ControlType="Button">
+      <Text>5</Text>
+    </UIItem>
+    <UIItem name="Button4" ControlType="Button">
+      <Text>4</Text>
+    </UIItem>
+    <UIItem name="AddButton" ControlType="Button">
+      <Text>Add</Text>
+    </UIItem>
+    <UIItem name="EqualButton" ControlType="Button">
+      <Text>Equals</Text>
+    </UIItem>
+    <UIItem name="ResultField" ControlType="Label">
+      <Id>150</Id>
+    </UIItem>
+    <UIItem name="ClearEntry" ControlType="Button">
+      <Id>82</Id>
+    </UIItem>
+    <UIItem name="SubtractButton" ControlType="Button">
+      <Text>Subtract</Text>
+    </UIItem>
+    <UIItem name="Form1Pane" ControlType="Button">
+      <Id>groupBox1</Id>
+    </UIItem>
+    <UIItem name="Form1Button" ControlType="Button">
+      <Id>buttonInGroupBox</Id>
+    </UIItem>
+    <UIItem name="TestCheckBox" ControlType="CheckBox">
+      <Text>Item2</Text>
+    </UIItem>
+    <UIItem name="ControlsTab" ControlType="CheckBox">
+      <Id>ControlsTab</Id>
+    </UIItem>
+  </FeatureSet>
+</ObjectRepository>

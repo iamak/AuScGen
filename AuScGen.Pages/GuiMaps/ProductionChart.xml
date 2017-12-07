@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Production Chart Controls">
+    
+    <Element name="txtFromDate" type="HtmlControl">
+      <id>fromDate</id>
+    </Element>
+
+    <Element name="btnReset" type="HtmlButton">
+      <id>btnClear</id>
+    </Element>
+
+    <Element name="btnApply" type="HtmlButton">
+      <id>btnGo</id>
+    </Element>
+
+    <Element name="visualizationChart" type="HtmlControl">
+      <id>highcharts-0</id>
+    </Element>
+    
+  </FeatureSet>
+</ObjectRepository>

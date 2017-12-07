@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="WasherGroup Formulas Tab Page">
+    <Element name="tabWashergroup" type="HtmlControl">
+      <id>tabWashergroup</id>
+    </Element>
+    <Element name="AddWasherGroup" type="HtmlControl">
+      <xpath>//span[contains(text(),'Add Washer Group')]</xpath>
+    </Element>
+    <Element name="tabWashersSetup" type="HtmlControl">
+      <xpath>//a[contains(text(),'Setup / Washers')]</xpath>
+    </Element>
+    <Element name="tabFormula" type="HtmlControl">
+      <id>tabFormula</id>
+    </Element>
+    <Element name="txtGroupNumber" type="HtmlControl">
+      <id>txtGroupNumber</id>
+    </Element>
+    <Element name="txtGroupName" type="HtmlControl">
+      <id>txtGroupName</id>
+    </Element>
+    <Element name="ddlWasherGroupType" type="HtmlControl">
+      <id>ddlWasherGroupType</id>
+    </Element>
+    <Element name="btnWasherGroupSaveSave" type="HtmlControl">
+      <id>btnAddEditWasherGroup</id>
+    </Element>
+    <Element name="btnSave" type="HtmlControl">
+      <id>btnSave</id>
+    </Element>
+    <Element name="divMessageCreate" type="HtmlControl">
+      <xpath>.//*[@id='divFormulaMessage']/label</xpath>
+    </Element>
+    <Element name="divMessage" type="HtmlControl">
+      <xpath>.//*[@id='divMessage']/label</xpath>
+    </Element>
+    <Element name="AddFormula" type="HtmlControl">
+      <id>btnAddFormula</id>
+    </Element>
+    <Element name="btnBacktoWasherGroups" type="HtmlControl">
+      <xpath>//span[contains(text(),'Back to Washer Groups')]</xpath>
+    </Element>
+    <Element name="txtNumber" type="HtmlControl">
+      <id>txtNumber</id>
+    </Element>
+    <Element name="ddlFormulaName" type="HtmlControl">
+      <id>ddlFormulaName</id>
+    </Element>
+    <Element name="txtNominalLoad" type="HtmlControl">
+      <id>txtNominalLoad</id>
+    </Element>
+    <Element name="txtLoadsPerMonth" type="HtmlControl">
+      <id>txtLoadsPerMonth</id>
+    </Element>
+    <Element name="txtExtraTime" type="HtmlControl">
+      <id>txtExtraTime</id>
+    </Element>
+    <Element name="FormulasTableGrid" type="HtmlControl">
+      <xpath>.//*[@id='tblWasherGroupsFormulas']</xpath>
+    </Element>
+    <Element name="WasherGroupsTableGrid" type="HtmlControl">
+      <xpath>.//*[@id='tblWasherGroups']</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

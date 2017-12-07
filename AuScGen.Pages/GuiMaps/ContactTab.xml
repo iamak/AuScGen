@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="PopUP Contacts Tab Controls">
+    <Element name="tabContacts" type="HtmlControl">
+      <id>tabContacts</id>
+    </Element>
+    <Element name="ContactKGridDiv" type="HtmlControl">
+      <class>k-grid-content</class>
+    </Element>
+    <Element name="ContactTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridContact']/div[3]/table</xpath>
+    </Element>
+    <Element name="PopUpAddContacts" type="HtmlInputButton">
+      <id>details-container</id>
+    </Element>
+    <Element name="txtTitle" type="HtmlInputText">
+      <xpath> //input[@name='Title']</xpath>
+    </Element>
+    <Element name="txtFirstName" type="HtmlInputText">
+      <xpath>.//*[@id='ContactFirstName']</xpath>
+    </Element>
+    <Element name="txtLastName" type="HtmlInputText">
+      <xpath>//input[@name='Last Name']</xpath>
+    </Element>
+    <Element name="selectPostion" type="HtmlSelect">
+      <id>ddlPosition</id>
+    </Element>
+    <Element name="txtEmail" type="HtmlInputText">
+      <xpath>//input[@name='Email Address']</xpath>
+    </Element>
+    <Element name="txtOfficePhone" type="HtmlInputText">
+      <xpath>//input[@name='Office Phone']</xpath>
+    </Element>
+    <Element name="txtMobilePhone" type="HtmlInputText">
+      <xpath>//input[@name='Mobile Phone']</xpath>
+    </Element>
+    <Element name="txtFaxNumber" type="HtmlInputText">
+      <xpath>//input[@name='Fax Number']</xpath>
+    </Element>
+    <Element name="btnCancelContacts" type="HtmlInputButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="btnSaveContacts" type="HtmlInputButton">
+      <id>btnUpdate</id>
+    </Element>
+    <Element name="lblSaveMessage" type="HtmlInputButton">
+      <xpath>//label[contains(text(),'Contact Added Successfully')]</xpath>
+    </Element>
+    <Element name="SuccessValidationMessage" type="HtmlControl">
+      <class>k-success-message</class>
+    </Element>
+    <Element name="ErrorMsg" type="HtmlControl">
+      <id>errorDiv</id>
+    </Element>
+    <Element name="VerifyMessages" type="HtmlControl">
+      <id>tabContactsContainer</id>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="Update Edit Contacts">
+    <Element name="btnUpdateSave" type="HtmlButton">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="txtTitleUpdate" type="HtmlControl">
+      <name>Title</name>
+    </Element>
+    <Element name="txtFirstNameUpdate" type="HtmlControl">
+      <name>First Name</name>
+    </Element>
+    <Element name="txtLastNameUpdate" type="HtmlControl">
+      <name>Last Name</name>
+    </Element>
+    <Element name="selectPositionUpdate" type="HtmlSelect">
+      <name>Position</name>
+    </Element>
+    <Element name="txtEmailAddressUpdate" type="HtmlControl">
+      <name>Email Address</name>
+    </Element>
+    <Element name="txtOfficePhoneUpdate" type="HtmlControl">
+      <name>Office Phone</name>
+    </Element>
+    <Element name="txtMobilePhoneUpdate" type="HtmlControl">
+      <name>Mobile Phone</name>
+    </Element>
+    <Element name="txtFaxUpdate" type="HtmlControl">
+      <name>Fax Number</name>
+    </Element>
+    
+    <Element name="txtEmailAddressEdit" type="HtmlControl">
+      <name>ContactEmailAdresss</name>
+    </Element>
+    <Element name="txtOfficePhoneEdit" type="HtmlControl">
+      <name>ContactOfficePhone</name>
+    </Element>
+    <Element name="txtMobilePhoneEdit" type="HtmlControl">
+      <name>ContactMobilePhone</name>
+    </Element>
+    <Element name="txtFaxEdit" type="HtmlControl">
+      <name>ContactFaxNumber</name>
+    </Element>
+    <Element name="txtTitleEdit" type="HtmlControl">
+      <name>ContactTitle</name>
+    </Element>
+    <Element name="txtFirstNameEdit" type="HtmlControl">
+      <name>ContactFirstName</name>
+    </Element>
+    <Element name="txtLastNameEdit" type="HtmlControl">
+      <name>ContactLastName</name>
+    </Element>
+    <Element name="selectPositionEdit" type="HtmlSelect">
+      <xpath>//input[@role='combobox']</xpath>
+    </Element>
+    <Element name="selectPositionEditUpdate" type="HtmlSelect">
+      <class>k-input</class>  
+    </Element>
+    <Element name="selectPositionTabEdit" type="HtmlControl">
+      <xpath>//span[contains(text(),'select')]</xpath>
+    </Element>
+
+  </FeatureSet>
+  <FeatureSet name="Contact Grid Details">
+    <Element name="btnAddContact" type="HtmlControl">
+      <xpath>.//*[@id='gridContact']/div[1]/a</xpath>
+    </Element>
+    <Element name="ContactsTableGridRow" type="HtmlControl">
+      <xpath>.//*[@id='gridContact']/div[3]/table/tbody</xpath>
+    </Element>
+    <Element name="tabContacts" type="HtmlControl">
+      <id>tabContacts</id>
+    </Element>
+    <Element name="ContactKGridDiv" type="HtmlControl">
+      <class>k-grid-content</class>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

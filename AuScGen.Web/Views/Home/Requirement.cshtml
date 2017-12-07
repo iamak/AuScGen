@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Requirement";
+}
+
+<script src="~/Scripts/angular/v1.3.3/angular.js"></script>
+<script src="~/AuScGen/App/App.js"></script>
+<script src="~/AuScGen/Controllers/RequirementController.js"></script>
+
+<h3 class="textColor">Object Requirement</h3>
+<br />
+<div ng-controller="RequirementController">
+    <div class="row">
+        <div class="col-md-3">
+            <label class="textColor">Enter the URL to navigate :  </label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" ng-model="InputUrl" />
+        </div>
+        <div class="col-md-3">
+            <input class="btn btn-primary btn-sm" type="button" value="Open" ng-disabled="!InputUrl" ng-click="Redirect()" />
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label class="textColor">Enter the XML file name : </label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" ng-model="InputExePath" />
+        </div>
+        <div class="col-md-3">
+            <input class="btn btn-primary btn-sm" type="button" value="GeneratePageClass" ng-disabled="!InputExePath" ng-click="PageClassGeneration()" />
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3, messageColor">
+            @*<input class="btn btn-primary btn-sm" type="button" value="GenerateTestMethods" ng-disabled="true" />*@
+            {{Message}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Dryer Tab Page">
+    <Element name="tabDryerContainer" type="HtmlControl">
+      <id>tabDryerContainer</id>
+    </Element>
+    <Element name="addDryerGroup" type="HtmlControl">
+      <id>addDryerGroup</id>
+    </Element>
+    <Element name="txtDryerGroupName" type="HtmlControl">
+      <id>txtDryerGroupName</id>
+    </Element>
+    <Element name="btnSaveGroup" type="HtmlButton">
+      <id>btnSaveGroup</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="txtDryerNumber" type="HtmlButton">
+      <id>txtDryerNumber</id>
+    </Element>
+    <Element name="txtDryerName" type="HtmlButton">
+      <id>txtDryerName</id>
+    </Element>
+    <Element name="ddlDryerType" type="HtmlButton">
+      <id>ddlDryerType</id>
+    </Element>
+    <Element name="txtDryerNominalLoad" type="HtmlButton">
+      <id>txtDryerNominalLoad</id>
+    </Element>
+    <Element name="dryerNominalLoadUnit" type="HtmlButton">
+      <xpath>.//*[@id='details-container']/div[6]/div/span</xpath>
+    </Element>
+    <Element name="btnSaveDryer" type="HtmlButton">
+      <id>btnSaveDryer</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="dryerErrorMsg" type="HtmlButton">
+      <id>dryerErrorMsg</id>
+    </Element>
+    <Element name="dryerAdditionMsg" type="HtmlButton">
+      <id>dryerErrorMsgDiv</id>
+    </Element>
+    <Element name="DryerGroups" type="HtmlButton">
+      <xpath>.//*[@id='accordion']</xpath>
+    </Element>
+    <Element name="DryerGroupsActions" type="HtmlButton">
+      <xpath>.//*[@id='accordion']</xpath>
+    </Element>
+    <Element name="btnSaveNo" type="HtmlInputButton">
+      <id>imbNo</id>
+    </Element>
+    <Element name="btnSaveYes" type="HtmlInputButton">
+      <id>imbYes</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

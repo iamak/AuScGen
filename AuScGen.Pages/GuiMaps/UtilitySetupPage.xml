@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Utility Factors">
+    <Element name="tabUtilities" type="HtmlControl">
+      <xpath>.//*[@id='tabUtilities']</xpath>
+    </Element>
+    <Element name="txtColdTemp" type="HtmlInputText">
+      <xpath>.//*[@id='txtColdTemp']</xpath>
+    </Element>
+    <Element name="txtColdPrice" type="HtmlInputText">
+      <id>txtColdPrice</id>
+    </Element>
+    <Element name="txtHotTemp" type="HtmlInputText">
+      <id>txtHotTemp</id>
+    </Element>
+    <Element name="txtHotPrice" type="HtmlInputText">
+      <id>txtHotPrice</id>
+    </Element>
+    
+    <Element name="txtTemperedTemp" type="HtmlInputText">
+      <id>txtTemperedTemp</id>
+    </Element>
+    <Element name="txtTemperedPrice" type="HtmlInputText">
+      <id>txtTemperedPrice</id>
+    </Element>
+    <Element name="txtWastePrice" type="HtmlInputText">
+      <id>txtWastePrice</id>
+    </Element>
+    <Element name="tabUtilitiesContainer0" type="HtmlSelect">
+      <xpath>.//*[@id='tabUtilitiesContainer']/div[1]/div[1]/div/div[10]/div[1]/span[1]/span/span[1]</xpath>
+    </Element>
+    <Element name="txtFreeWater1Temp" type="HtmlInputText">
+      <id>txtFreeWater1Temp</id>
+    </Element>
+    <Element name="tabUtilitiesContainer1" type="HtmlSelect">
+      <xpath>.//*[@id='tabUtilitiesContainer']/div[1]/div[1]/div/div[11]/div[1]/span[1]/span/span[1]</xpath>
+    </Element>
+    <Element name="txtFreeWater1Price" type="HtmlInputText">
+      <id>txtFreeWater1Price</id>
+    </Element>
+    <Element name="tabUtilitiesContainer2" type="HtmlSelect">
+      <xpath>.//*[@id='tabUtilitiesContainer']/div[1]/div[1]/div/div[12]/div[1]/span[1]/span/span[1]</xpath>
+    </Element>
+    <Element name="txtFreeWater2Temp" type="HtmlInputText">
+      <id>txtFreeWater2Temp</id>
+    </Element>
+    <Element name="txtFreeWater2Price" type="HtmlInputText">
+      <id>txtFreeWater2Price</id>
+    </Element>
+   <Element name="txtFreeWater3Temp" type="HtmlInputText">
+      <id>txtFreeWater3Temp</id>
+    </Element>
+    <Element name="txtFreeWater3Price" type="HtmlInputText">
+      <id>txtFreeWater3Price</id>
+    </Element>
+    <Element name="txtEvaporationFactor" type="HtmlInputText">
+      <id>txtEvaporationFactor</id>
+    </Element>
+    <Element name="tabUtilitiesContainer3" type="HtmlSelect">
+      <xpath>.//*[@id='tabUtilitiesContainer']/div[1]/div[2]/div[1]/div[3]/div[1]/span[1]/span/span[1]</xpath>
+    </Element>
+        <Element name="ddlGasOilProperties" type="HtmlSelect">
+      <xpath>.//*[@id='tabUtilitiesContainer']/div[1]/div[2]/div[1]/div[3]/div[1]/span[1]/span/span[1]</xpath>
+    </Element>
+    <Element name="txtGasPrice" type="HtmlInputText">
+      <id>txtGasPrice</id>
+    </Element>
+    <Element name="txtElectricityTarrif" type="HtmlInputText">
+      <id>txtElectricityTarrif</id>
+    </Element>
+    <Element name="txtRewashFactor" type="HtmlInputText">
+      <id>txtRewashFactor</id>
+    </Element>
+  <Element name="ddlBoilerType" type="HtmlSelect">
+      <xpath>.//*[@id='tabUtilitiesContainer']/div[1]/div[2]/div[1]/div[15]/div[2]/span/span/span[1]</xpath>
+ </Element>
+    <Element name="txtSteamPercentage" type="HtmlInputText">
+      <id>txtSteamPercentage</id>
+    </Element>
+    <Element name="txtBoilerPercentage" type="HtmlInputText">
+      <id>txtBoilerPercentage</id>
+    </Element>
+    <Element name="txtStackPercentage" type="HtmlInputText">
+      <id>txtStackPercentage</id>
+    </Element>
+    <Element name="btnSave" type="HtmlButton">
+      <id>btnSave</id>
+    </Element>
+	<Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+	<Element name="successMsg" type="HtmlControl">
+      <id>successMsg</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

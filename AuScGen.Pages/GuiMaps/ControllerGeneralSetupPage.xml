@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Controller Setup">
+    <Element name="btnAddController" type="HtmlControl">
+      <xpath>.//*[@id='gridControllerSetupList']/div[1]/a</xpath>
+    </Element>
+    <Element name="ControllerTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridControllerSetupList']/div[3]/table</xpath>
+    </Element>
+    <Element name="controllerListPageCalender" type="KendoCalendar">
+      <xpath>html/body/div[2]/div/div</xpath>
+    </Element>
+    <Element name="tabControllersList" type="HtmlControl">
+      <id>tabControllersList</id>
+    </Element>
+    <Element name="tabGeneral" type="HtmlControl">
+      <id>tabGeneral</id>
+    </Element>
+    <Element name="tabAdvanced" type="HtmlControl">
+      <id>tabAdvanced</id>
+    </Element>
+    <Element name="tabPumpList" type="HtmlControl">
+      <id>tabPumpList</id>
+    </Element>
+    <Element name="ddlControllerModel" type="HtmlSelect">
+      <id>ddlControllerModel</id>
+    </Element>
+    <Element name="ddlControllerType" type="HtmlSelect">
+      <id>ddlControllerType</id>
+    </Element>
+    <Element name="btnSave" type="HtmlButton">
+      <id>btnSave</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="controllerAddMessage" type="HtmlControl">
+      <id>errorDiv_msg</id>
+    </Element>
+    <Element name="controllerListMessage" type="HtmlControl">
+      <id>errorDiv</id>
+    </Element>
+    <Element name="backtoContollers" type="HtmlInputText">
+      <xpath>.//*[@id='bckbutton']/span[2]</xpath>
+    </Element>
+    <Element name="txtOPCServerUltraxAB" type="HtmlInputText">
+      <id>Input_Control_5_11</id>
+    </Element>
+    <Element name="txtControllerNumberUltraxAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_5']/div[2]/div[1]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtIPAddressAB" type="HtmlInputText">
+      <id>Input_Control_5_22</id>
+    </Element>
+    <Element name="txtControllerVersionUltraxAB" type="HtmlSelect">
+      <id>Input_Control_5_16</id>
+    </Element>
+    <Element name="txtComPortNumberUltraxAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_5']/div[5]/div[1]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtPreflushTimeUltraxAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_5']/div[1]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtOPCObjectUltraxAB" type="HtmlInputText">
+      <id>Input_Control_5_14</id>
+    </Element>
+    <Element name="txtPostflushUltraxAB" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_5']/div[3]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtDDEDriverUltraxAB" type="HtmlInputText">
+      <id>Input_Control_5_17</id>
+    </Element>
+    <Element name="txtControllerNameUltraxBEC" type="HtmlInputText">
+      <id>Input_Control_6_78</id>
+    </Element>
+    <Element name="txtWebPortLoginUltraxBEC" type="HtmlInputText">
+      <id>Input_Control_6_64</id>
+    </Element>
+    <Element name="txtWebPortIPUltraxBEC" type="HtmlInputText">
+      <id>Input_Control_6_63</id>
+    </Element>
+    <Element name="txtWebPortPasswordUltraxBEC" type="HtmlInputText">
+      <id>Input_Control_6_65</id>
+    </Element>
+    <Element name="txtSerialNumberUltraxBEC" type="HtmlInputText">
+      <id>Input_Control_6_79</id>
+    </Element>
+    <Element name="txtAMSNetIDAddressUltraxBEC" type="HtmlInputText">
+      <id>Input_Control_6_21</id>
+    </Element>
+    <Element name="txtControllerNumberUltraxBEC" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_6']/div[2]/div[1]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtPreflushTimeUltraxBEC" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_6']/div[1]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtPostflushTimeUltraxBEC" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_6']/div[2]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+    <Element name="txtAMSNetIDmyControlBEC" type="HtmlInputText">
+      <id>Input_Control_4_47</id>
+    </Element>
+    <Element name="txtControllerNumbermyControlBEC" type="KendoExtendedInput">
+      <xpath>.//*[@id='fieldGroupTable_4']/div[1]/div[2]/div[2]/span[1]</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

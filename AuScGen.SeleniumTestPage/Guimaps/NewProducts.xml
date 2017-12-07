@@ -1,0 +1,28 @@
+<ObjectRepository>
+<FeatureSet name='NewProductPage'>
+	<Element type='Textbox' name='TxtProductName'>
+		<id>Name</id>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+	<Element type='Textbox' name='TxtProductCode'>
+		<id>ProductCode</id>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+	<Element type='Textbox' name='TxtProductDescription'>
+		<id>Description</id>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+	<Element type='Combobox' name='ComboProductFamily'>
+		<id>Family</id>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+	<Element type='Checkbox' name='CheckActive'>
+		<id>IsActive</id>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+	<Element type='Button' name='BtnSaveAndAddPrice'>
+		<xpath>(//input[@name='save_new'])[2]</xpath>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+</FeatureSet>
+</ObjectRepository>

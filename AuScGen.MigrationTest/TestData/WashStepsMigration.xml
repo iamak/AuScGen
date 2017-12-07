@@ -1,0 +1,38 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyWashStepsConventional" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>opsteps</TableName>
+      <UniqueId>Op_clas</UniqueId>
+      <Fields>opC_lass,Istnnel</Fields>
+      <Query>SELECT OPSTEPS.OP_CLASS,OPSTEPS.FORMULA,OPSTEPS.STEP,OPSTEPS.OP_CODE,OPSTEPS.TIME,OPSTEPS.WATER_TYPE,OPSTEPS.LEVEL,OPSTEPS.WATER_TEMP,
+OPSTEPS.DRAIN_TO,OPSTEPS.PRODUCT,OPSTEPS.QTY,OPSTEPS.DRAIN_TIME
+ FROM OPSTEPS,opops,opclas where opsteps.op_code=opops.op_code and opsteps.op_class=opclas.op_class
+</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>
+      </TableName>
+      <UniqueId>GroupNumber</UniqueId>
+      <Fields>DryerId</Fields>
+      <Query>Select 8f rom DryerLoads</Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC02_VerifyWashstepsTunnel" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>opclass</TableName>
+      <UniqueId>Op_clas</UniqueId>
+      <Fields>opC_lass,Istnnel</Fields>
+      <Query>Select * from DryersId</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigartion</DBName>
+      <TableName>WasherGroup</TableName>
+      <UniqueId>GroupNumber</UniqueId>
+      <Fields>DryerId</Fields>
+      <Query>Select 8f rom DryerLoads</Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

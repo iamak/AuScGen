@@ -1,0 +1,33 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyWashersData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>washers</TableName>
+      <UniqueId>washer</UniqueId>
+      <Fields>
+      </Fields>
+      <Query>select WASHER,DESCRIPTION,BRAND,SIZE,
+WEIGHT,WEIGHT_RATIO,OP_CLASS,EOF_SIGNAL,
+WASHER_MODE,XTRA_RT,NUM_CHAMBERS,AW_ACTIVE,
+HOLDDELAY,PONY,TUNNEL,TUNNEL_TRF
+from washers
+</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>washer</TableName>
+      <UniqueId>PlantWasherNumber</UniqueId>
+      <Fields>DryerId</Fields>
+      <Query>
+SELECT w.PlantWasherNumber,m.MachineName,m.Brand,m.Size,w.MaxLoad,m.WeightRatio,
+wg.WasherGroupNumber,w.ProgramNumber,w.WasherMode,w.xtra_rt,m.NumberOfComp,w.AWEActive,w.HoldDelay,
+m.IsPony,m.IsTunnel,w.Tunnel_Trf,m.MachineInternalId,w.WaterFlushTime,cc.TopicName,w.Is_Deleted
+FROM TCD.Washer W
+  INNER JOIN tcd.MachineSetup m on w.WasherId=m.WasherId 
+  inner join tcd.washermodelSize wms on wms.WasherModelId=w.ModelId
+  inner join tcd.WasherGroup wg on wg.WasherGroupId=m.GroupId
+  inner join tcd.ConduitController cc on cc.ControllerId=m.ControllerId
+</Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

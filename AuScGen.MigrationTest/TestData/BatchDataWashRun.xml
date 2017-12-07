@@ -1,0 +1,86 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyBatchdata_Washrun" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>washrun</TableName>
+      <UniqueId>wr_id</UniqueId>
+      <Fields>
+        wr_id, washer, formula, loads, actual_wt, bof_date, eof_date, origin, op_class, inj_class, uf_desc, lf_plantf,
+        lf_injf, lf_wt_target, lf_rt_target, lf_rt_gt, tunnel_id, lf_clean_wt, lf_clean_aw, next_bof_dt
+      </Fields>
+      <Query>
+        SELECT top 100 wr_id, washer, formula, loads, actual_wt, bof_date, eof_date, origin, op_class, inj_class, uf_desc, lf_plantf,
+        lf_injf, lf_wt_target, lf_rt_target, lf_rt_gt, tunnel_id, lf_clean_wt, lf_clean_aw, next_bof_dt from washrun order by wr_id
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.BatchData</TableName>
+      <UniqueId>wr_id</UniqueId>
+      <Fields>
+        Wr_id,plantwashernumber,ProgramNumber,Loads,ActualWeight,StartDate,EndDate,
+        Origin,WasherGroupNumber,InjClass,UFDesc,LFPlantf,LFInjf,LfWtTarget,LfRtTarget,
+        LfRtGt,TunnelId,LfCleanWeight,LfCleanAw,NextBofDate
+      </Fields>
+      <Query>
+        SELECT bd.Wr_id,bd.EcolabWasherId,bd.ProgramNumber,cw.Loads,
+        bd.ActualWeight,convert(varchar(30) ,bd.StartDate, 105)  + ' ' + convert(varchar(20),bd.StartDate, 108)
+        as StartDate,convert(varchar(30) ,bd.EndDate, 105)  + ' ' + convert(varchar(20),bd.EndDate, 108)
+        as Enddate,cw.Origin,wg.WasherGroupNumber,
+        cw.InjClass,cw.UFDesc,bd.PlantWasherNumber,
+        cw.LFPlantf,cw.LFInjf,cw.LfWtTarget,cw.LfRtTarget,cw.LfRtGt,cw.TunnelId,
+        cw.LfCleanWeight,cw.LfCleanAw,
+        convert(varchar(30) ,cw.NextBofDate, 105)  + ' ' + convert(varchar(20),cw.NextBofDate, 108)
+        as NextBofDate from TCD.BatchData bd
+        inner join tcd.CWBatchData cw on cw.Wr_id=bd.Wr_id
+        inner join tcd.washerGroup wg on wg.WasherGroupId=bd.GroupId order by wr_id
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC02_VerifyBacthDataWasherinj" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>washinj</TableName>
+      <UniqueId>wr_id</UniqueId>
+      <Fields>wr_id,date,washer,formula,injection,op_counter</Fields>
+      <Query>
+        SELECT top 1000 wr_id,date, washer, formula, injection, op_counter from washinj order by wr_id
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>Tcd.WasherReadings</TableName>
+      <UniqueId>BatchId</UniqueId>
+      <Fields>
+        BatchID,timeStamp,WasherId,Formula,InjectionNumber,
+        OpCounter
+      </Fields>
+      <Query>
+        select BatchID,timeStamp,WasherId,Formula,InjectionNumber,
+        OpCounter from tcd.WasherReadings
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC03_VerifyBacthDataWasherchem" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>washchem</TableName>
+      <UniqueId>cost</UniqueId>
+      <Fields>wr_id,ounces,cost</Fields>
+      <Query>
+        SELECT wr_id, ounces, cost from washchem  where wr_id  in ( select top 100 wr_id from washrun order by wr_id) order by wr_id
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.BatchProductData</TableName>
+      <UniqueId>price</UniqueId>
+      <Fields>Wr_id,ActualQuantity,Price </Fields>
+      <Query>
+
+        select bd.Wr_id,CONVERT(DECIMAL(16,5), (ActualQuantity*(128))/1.0) as ActualQuantity,CONVERT(DECIMAL(16,4), Price/1.0) as Price from tcd.BatchProductData bp
+        inner join tcd.BatchData bd on bd.BatchId=bp.BatchId order by Wr_id asc
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

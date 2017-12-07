@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Washers Tunnel General Tab Page">
+    <Element name="btnAddNewWasher" type="HtmlControl">
+      <id>btnAddNewWasher</id>
+    </Element>
+    <Element name="txtName" type="HtmlControl">
+      <id>txtName</id>
+    </Element>
+    <Element name="ddlController" type="HtmlControl">
+      <id>ddlController</id>
+    </Element>
+    <Element name="ddlWasherMode" type="HtmlControl">
+      <id>ddlWasherMode</id>
+    </Element>
+    <Element name="txtNoOfCompartments" type="HtmlControl">
+      <id>txtNoOfCompartments</id>
+    </Element>
+    <Element name="ddlPress" type="HtmlControl">
+      <id>ddlPress</id>
+    </Element>
+    <Element name="txtPlantWasher" type="HtmlControl">
+      <id>txtPlantWasher</id>
+    </Element>
+    <Element name="ddlModel" type="HtmlControl">
+      <id>ddlModel</id>
+    </Element>
+    <Element name="txtMaxLoad" type="HtmlControl">
+      <id>txtMaxLoad</id>
+    </Element>
+    <Element name="txtNoOfTanks" type="HtmlControl">
+      <id>txtNoOfTanks</id>
+    </Element>
+    <Element name="ddlTransferType" type="HtmlControl">
+      <id>ddlTransferType</id>
+    </Element>
+    <Element name="txtProgramNo" type="HtmlControl">
+      <id>txtProgramNo</id>
+    </Element>
+    <Element name="btnSaveTunnel" type="HtmlControl">
+      <id>btnSaveTunnel</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlControl">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="txtDescription" type="HtmlControl">
+      <id>txtDescription</id>
+    </Element>
+    <Element name="divMessage" type="HtmlControl">
+      <xpath>.//*[@id='divMessage']/label</xpath>
+    </Element>
+    <Element name="WashersTableGrid" type="HtmlControl">
+      <xpath>.//*[@id='tblWashers']</xpath>
+    </Element>
+    <Element name="bckWasherbutton" type="HtmlControl">
+      <id>bckWasherbutton</id>
+    </Element>
+    
+  </FeatureSet>
+</ObjectRepository>

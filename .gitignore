@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/RadianETLDataMigrationCheck
+/Wk/Selenium-WithFixtures/WKH.SeleniumFrameWork
+/conf

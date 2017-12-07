@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="WaterEnergy Tab Controls">
+    <Element name="tabUtility" type="HtmlControl">
+      <id>tabUtilities</id>
+    </Element>
+    <Element name="tabActiveTabItem" type="HtmlControl">
+      <class>tab active</class>
+    </Element>
+    <Element name="MainMenubreadcrumb" type="HtmlControl">
+      <id>topnav</id>
+    </Element>
+    <Element name="WETabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridUtility']/div[3]/table</xpath>
+    </Element>
+    <Element name="WETabGridTableRoleBased" type="HtmlControl">
+      <xpath>.//*[@id='gridUtility']/div[2]/table</xpath>
+    </Element>
+    <Element name="MainMenubread" type="HtmlControl">
+      <id>breadCrumbContainer</id>
+    </Element>
+    <Element name="SuccessValidationMessage" type="HtmlControl">
+      <id>errorDiv</id>
+    </Element>
+    <Element name="btnDelete" type="HtmlControl">
+      <class>k-icon k-delete k-state-border-down</class>
+    </Element>
+    <Element name="btnCancel" type="HtmlControl">
+      <class>btn btn-default pull-left btn-sm cancelRowPopup</class>
+    </Element>
+    <Element name="tabWEDevice" type="HtmlControl">
+      <id>tabDevice</id>
+    </Element>
+    <Element name="btnAddWEDetails" type="HtmlControl">
+      <xpath>.//*[@id='gridUtility']/div[1]/a/span</xpath>
+    </Element>
+    <Element name="SelectDeviceType" type="HtmlControl">
+      <id>ddlDeviceTypeAddNew</id>
+    </Element>
+    <Element name="SelectDeviceModel" type="HtmlControl">
+      <id>ddlDeviceModelAddNew</id>
+    </Element>
+    <Element name="InstallDate" type="HtmlControl">
+      <xpath>.//*[@id='installDate']</xpath>
+    </Element>
+    <Element name="txtCommentUpdate" type="HtmlControl">
+      <id>txtComment</id>
+    </Element>
+    <Element name="txtComment" type="HtmlControl">
+      <id>txtCommentAdd</id>
+    </Element>
+    <Element name="btnWEUpdate" type="HtmlControl">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="WEInvalidMsg" type="HtmlControl">
+      <class>k-widget k-tooltip k-tooltip-validation k-invalid-msg</class>
+    </Element>
+    <Element name="btnWECancel" type="HtmlControl">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>
+    <Element name="WETabGridTableRows" type="HtmlControl">
+      <xpath>.//*[@id='gridUtility']/div[3]/table/tbody</xpath>
+    </Element>
+    <Element name="WEPosition" type="HtmlControl">
+      <class>k-input</class>
+    </Element>
+    <Element name="txtDeviceNameAddNew" type="HtmlControl">
+      <id>txtDeviceNameAddNew</id>
+    </Element>
+    <Element name="DeviceName" type="HtmlControl">
+      <name>DeviceName</name>
+    </Element>
+    
+  </FeatureSet>
+</ObjectRepository>

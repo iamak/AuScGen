@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Finishers Tab Page">
+    <Element name="tabFinnisherContainer" type="HtmlControl">
+      <xpath>//a[contains(text(),'Finishers')]</xpath>
+    </Element>
+    <Element name="addFinnisherGroup" type="HtmlControl">
+      <xpath>//span[contains(text(),'Add Finisher Group')]</xpath>
+    </Element>
+    <Element name="txtFinnisherGroupName" type="HtmlControl">
+      <id>txtFinnisherGroupName</id>
+    </Element>
+    <Element name="txtFinnisherNumber" type="HtmlControl">
+      <id>txtFinnisherNumber</id>
+    </Element>
+    <Element name="txtFinnisherGroupName" type="HtmlControl">
+      <id>txtFinnisherGroupName</id>
+    </Element>
+    <Element name="AddFinisherGroupSave" type="HtmlControl">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="AddFinisherGroupCancel" type="HtmlControl">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>
+    <Element name="FinisherGroups" type="HtmlButton">
+      <xpath>.//*[@id='accordion']</xpath>
+    </Element>
+    <Element name="finnisherErrorMsgDiv" type="HtmlControl">
+      <id>finnisherErrorMsgDiv</id>    
+    </Element>
+    <Element name="finnisherErrorMsg" type="HtmlControl">
+      <id>finnisherErrorMsg</id>
+    </Element>
+    <Element name="txtFinnisherName" type="HtmlControl">
+      <id>txtFinnisherName</id>
+    </Element>
+    <Element name="ddlFinnisherType" type="HtmlControl">
+      <id>ddlFinnisherType</id>
+    </Element>
+    <Element name="AddFinisherSave" type="HtmlControl">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="AddFinisherCancel" type="HtmlButton">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

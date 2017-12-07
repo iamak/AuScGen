@@ -1,0 +1,24 @@
+<ObjectRepository>
+<FeatureSet name='HomePage'>
+	<Element type='Link' name='LnkProducts'>
+		<xpath>//a[contains(text(),'Products')]</xpath>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+  <Element type='' name='PopupClose'>
+    <xpath>//div[@id='walkthrough-callout-close']/img</xpath>
+    <PageTitle>UMPS JS frame</PageTitle>
+  </Element>
+  <Element type='' name='SideTab'>
+    <xpath>//div[@id='walkthrough-sidebar-toggle']/img</xpath>
+    <PageTitle>UMPS JS frame</PageTitle>
+  </Element>
+  <Element type='' name='MenuUser'>
+    <xpath>//div[@id='userNavButton']</xpath>
+    <PageTitle>UMPS JS frame</PageTitle>
+  </Element>
+  <Element type='' name='LnkLogout'>
+    <xpath>//div[@id='userNav-menuItems']/a[4]</xpath>
+    <PageTitle>UMPS JS frame</PageTitle>
+  </Element>
+</FeatureSet>
+</ObjectRepository>

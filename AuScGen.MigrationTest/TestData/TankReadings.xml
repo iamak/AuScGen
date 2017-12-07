@@ -1,0 +1,18 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyTankReadingsData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>tanklevels</TableName>
+      <UniqueId>date</UniqueId>
+      <Fields>TankNo,Date,SKU,level </Fields>
+      <Query>Select TankNo,Date,SKU,level from tanklevels </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.tankreading</TableName>
+      <UniqueId>TimeStamp</UniqueId>
+      <Fields>TankNumber,TimeStamp,SKU,level</Fields>
+      <Query>SELECT TankNumber,TimeStamp,SKU,level from [TCD].[TankReading]</Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

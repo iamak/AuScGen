@@ -1,0 +1,23 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyPumpsValvesData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>ultraxij</TableName>
+      <UniqueId>ultrax_name</UniqueId>
+      <Fields>ultrax_name,pulses,chemname,oz_sec</Fields>
+      <Query>select ultrax_name,pulses,chemname,oz_sec from ultraxij where ultrax_name in (select ultrax_name from ultrax)</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>ControllerEquipmentSetup</TableName>
+      <UniqueId>TopicName</UniqueId>
+      <Fields>topicname,kfactor,lfschemicalname,pumpcalibration</Fields>
+      <Query>
+        SELECT cc.TopicName,CONVERT(DECIMAL(16,2), ce.PumpCalibration/1.0) as PumpCalibration,
+        ce.KFactor,ce.LfsChemicalName
+        from [TCD].[ControllerEquipmentSetup] ce
+        inner join tcd.ConduitController cc on cc.ControllerId=ce.ControllerId
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

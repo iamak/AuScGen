@@ -1,0 +1,37 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyPumpsValvesTagsData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>ultraxij</TableName>
+      <UniqueId>ultrax_name</UniqueId>
+      <Fields>ultrax_name, ppo_dde_link, srf_dde_link, ops_dde_link, name_link </Fields>
+      <Query>SELECT ultrax_name, injector, ppo_dde_link, srf_dde_link, ops_dde_link, name_link from ultraxij
+</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.ModuleTags</TableName>
+      <UniqueId>topicname</UniqueId>
+      <Fields>TopicName,Tag_PPOL,Tag_SRFL,Tag_OPSL,Tag_NML</Fields>
+      <Query>
+        select TopicName,Tag_PPOL,Tag_SRFL,Tag_OPSL,Tag_NML
+        from
+        (
+        Select CC.TopicName,MT.TagType,MT.TagAddress
+        From TCD.ModuleTags MT
+        Inner Join TCD.ModuleType MTY ON MT.ModuleTypeId=MTY.ModuleTypeId
+        Inner Join TCD.ControllerEquipmentSetup CES
+        ON CES.ControllerEquipmentSetupId=MT.ModuleId
+        inner join tcd.ConduitController cc on cc.ControllerId=CES.ControllerId
+        where MT.ModuleTypeId=4
+        ) d
+        pivot
+        (
+        max(TagAddress)
+        for tagtype in (Tag_PPOL,Tag_SRFL,Tag_OPSL,Tag_NML)
+        ) piv;
+
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

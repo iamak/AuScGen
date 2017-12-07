@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Labour Cost tab controls">
+    <Element name="labourCostGridTable" type="HtmlControl">
+      <xpath>.//*[@id='frmLaborCost']/div/div[2]/table</xpath>
+    </Element>
+    <Element name="btnSave" type="HtmlSpan">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="SelectPreferredLanguage" type="HtmlControl">
+      <id>ddlLanguages</id>
+    </Element>
+    <Element name="btnUpload" type="HtmlInputButton">
+      <atribute>id=btnSave</atribute>
+    </Element>
+    <Element name="SuccessValidationMessage" type="HtmlControl">
+      <class>k-success-message</class>
+    </Element>
+    <Element name="tabLaborCost" type="HtmlControl">
+      <id>tabLaborCost</id>
+    </Element>
+    <Element name="normalCost" type="HtmlInputControl">
+      <name>1</name>
+    </Element>
+    <Element name="temporaryCost" type="HtmlInputControl">
+      <name>3</name>
+    </Element>
+    <Element name="btnNoPopUp" type="HtmlButton">
+      <id>imbNo</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

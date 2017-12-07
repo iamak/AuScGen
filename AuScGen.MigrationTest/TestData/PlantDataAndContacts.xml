@@ -1,0 +1,75 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyPlantDetails" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>Client</TableName>
+      <UniqueId>Company</UniqueId>
+      <Fields>Ecolab_account,Company,language_id,Currency_Symbol,Logo_file</Fields>
+      <Query>Select Ecolab_account,Company,language_id,Currency_Symbol,Logo_file from client</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.Plant</TableName>
+      <UniqueId>Name</UniqueId>
+      <Fields>EcolabAccountNumber,Name,LanguageId,CurrencyCode,logo</Fields>
+      <Query>Select EcolabAccountNumber,Name,LanguageId,CurrencyCode,logo from TCD.Plant</Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC02_VerifyPlantCustomerAddressDetails" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>Client</TableName>
+      <UniqueId>Addr1</UniqueId>
+      <Fields>Addr1 ,Addr2,City,State,Zip </Fields>
+      <Query>Select Addr1,Addr2,City,State,Zip from client</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.PlantCustAddress</TableName>
+      <UniqueId>Addr1</UniqueId>
+      <Fields>Addr1,Addr2,City,State,Zip</Fields>
+      <Query>select pca.BillingAddr1 as Addr1,pca.BillingAddr2 as Addr2,pca.city as City,pca.Country as State,pca.zip from TCD.PlantCustAddress pca
+inner join TCD.Plant p on  p.EcolabAccountNumber=pca.EcolabAccountNumber</Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC03_VerifyPlantContactsDetailsforColumnContact" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>Client</TableName>
+      <UniqueId>Contact</UniqueId>
+      <Fields>contact,Contact_phone</Fields>
+      <Query>select contact,Contact_phone from client</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.PlantCustAddress</TableName>
+      <UniqueId>Contact</UniqueId>
+      <Fields>Contact,ContactOfficePhone</Fields>
+      <Query>
+        SELECT Concat(ContactFirstName, ' ', ContactLastName) as Contact,ContactOfficePhone FROM
+        (SELECT ROW_NUMBER() OVER (ORDER BY ID) AS RowNum, * FROM tcd.plantcontact) sub
+        WHERE RowNum = 1
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC04_VerifyPlantContactDetailsTSNREP" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>Client</TableName>
+      <UniqueId>TSN_REP</UniqueId>
+      <Fields>TSN_Rep,TSN_Phone</Fields>
+      <Query>select TSN_Rep,TSN_Phone from client</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.PlantCustAddress</TableName>
+      <UniqueId>Contact</UniqueId>
+      <Fields>Contact,ContactOfficePhone </Fields>
+      <Query>SELECT Concat(ContactFirstName, ' ', ContactLastName) as Contact,ContactOfficePhone FROM
+(SELECT ROW_NUMBER() OVER (ORDER BY ID) AS RowNum, * FROM tcd.plantcontact
+) sub
+WHERE RowNum = 2
+</Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Login Page">
+    <Element name="txtUserName" type="HtmlControl">
+      <id>userNameTextBox</id>
+    </Element>
+    <Element name="txtPassword" type="HtmlControl">
+      <id>passWordTextBox</id>
+    </Element>
+    <Element name="btnLogin" type="HtmlControl">
+      <id>signInLink</id>
+    </Element>    
+  </FeatureSet>
+</ObjectRepository>

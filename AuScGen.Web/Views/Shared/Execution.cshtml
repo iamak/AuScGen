@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Execution";
+}
+
+<h2 class="textColor">Execution</h2>
+<br />
+<script src="~/Scripts/angular/v1.3.3/angular.js"></script>
+<script src="~/AuScGen/App/App.js"></script>
+<script src="~/AuScGen/Controllers/ExecutionController.js"></script>
+<link href="~/Content/AuScGen_Css/TreeView.css" rel="stylesheet" />
+<link href="~/Content/AuScGen_Css/TreeViewContainer.css" rel="stylesheet" />
+<div ng-controller="ExecutionController">
+    <div class="row">
+        <div class="col-md-3">
+            <label class="textColor">Enter the Test Project DLL :  </label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" ng-model="InputTestDllPath" />
+        </div>
+        <div class="col-md-3">
+            <input class="btn btn-primary" width="200" type="button" value="GetTestMethods" ng-disabled="!InputTestDllPath" ng-click="GetMethodsFromTheAssembly()" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="row" ng-hide="!InputTestDllPath">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-5">
+            <div id="container">
+                <div class="treeview" ng-repeat="x in TestMethods">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="node-{{$index}}" checked="checked" /><label><input type="checkbox" ng-model="IsClassChecked" ng-click="ClassSelected(x.ClassName,IsClassChecked)" /><span></span></label><label for="node-{{$index}}">{{ x.ClassName }}</label>
+                            <ul>
+                                <li ng-repeat="y in x.ClassMethods">
+                                    <input type="checkbox" id="node-{{ $parent.$index }}-{{$index}}" checked="checked" /><label><input id="chk-{{ y.MethodName }}" type="checkbox" ng-model="y.IsChecked" ng-click="MethodSelection(y)" /><span></span></label><label for="node-{{ $parent.$index }}-{{$index}}">{{  y.MethodName }}</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-md-4, messageColor"><h1>{{Message}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-3">
+            <input class="btn btn-primary" type="button" value="Execute Test Methods" ng-disabled="!InputTestDllPath" ng-click="ExecuteTestmethods()" />
+        </div>
+        <div class="col-md-3">
+            <input class="btn btn-primary" type="button" value="Generate Report" ng-disabled="!InputTestDllPath" ng-click="GenerateReport()" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12, messageColor">
+            {{Message}}
+        </div>
+    </div>
+</div>
+
+

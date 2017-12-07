@@ -1,0 +1,24 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyChemicalsdata" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>Chemicals</TableName>
+      <UniqueId>SKU2</UniqueId>
+      <Fields>SKU2,GAL_TTL</Fields>
+      <Query>
+        select chemicals.sku2,chemicals.description,chempric.gal_ttl
+        from chemicals,chempric where chemicals.sku=chempric.sku and sku2 not in ('') order by chemicals.sku2 asc,chempric.start_date desc
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.ProductDataMapping</TableName>
+      <UniqueId>SKU</UniqueId>
+      <Fields>SKU,COST</Fields>
+      <Query>
+        select pdm.SKU,pm.name,pdm.Cost from tcd.ProductdataMapping pdm
+        inner join tcd.ProductMaster pm on pm.ProductId=pdm.ProductID
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

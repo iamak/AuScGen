@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Account Balance Page">
+    <Element name="AccountBalanceTab" type="HtmlControl">
+      <xpath>html/body/div[2]/div[3]/div/div/ul/li[1]/a</xpath>
+    </Element>    
+  </FeatureSet>
+</ObjectRepository>

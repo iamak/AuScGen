@@ -1,0 +1,55 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyWasherTagsAlelnBardleyData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>washers</TableName>
+      <UniqueId>washer</UniqueId>
+      <Fields>washer,cf_link,ci_link,op_link,aw_link,awe_custlink,eof_link,
+mode_link,ft_link,inj_class_link,inj_ratio_link,hold_link,tilt_link,
+sling_link,aw_active_link,hold_delay_link,loadid_link,
+ratiometric_active_link,ratiometric_link,washer_link</Fields>
+      <Query>SELECT washer, cf_link, ci_link, op_link, aw_link, awe_custlink, eof_link, mode_link, ft_link, inj_class_link, inj_ratio_link, hold_link, tilt_link, sling_link, aw_active_link, hold_delay_link, loadid_link, ratiometric_active_link, ratiometric_link, washer_link from lfs_washers</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>washertags</TableName>
+      <UniqueId>PlantWasherNumber</UniqueId>
+      <Fields>PlantWasherNumber,Tag_FRM,Tag_INJ,Tag_OPC,Tag_AWEF,
+Tag_AWEC,Tag_EOF,Tag_MODE,Tag_FLSHT,Tag_ICLAS,Tag_INJRO,
+Tag_HOLD,Tag_TILT,Tag_SLING,Tag_AWEA,
+Tag_HOLDD,Tag_LOAD,Tag_RMAL,Tag_RML,
+Tag_WSNO</Fields>
+      <Query>select PlantWasherNumber,Tag_FRM,Tag_INJ,Tag_OPC,Tag_AWEF,Tag_AWEC,Tag_EOF,Tag_MODE,Tag_FLSHT,Tag_ICLAS,Tag_INJRO,Tag_HOLD,Tag_TILT,Tag_SLING,Tag_AWEA,
+Tag_HOLDD,Tag_LOAD,Tag_RMAL,Tag_RML,Tag_WSNO
+from
+(
+select w.PlantWasherNumber,wt.TagType,wt.TagAddress from tcd.WasherTags wt
+inner join TCD.TagType tt on TT.TagType=wT.TagType
+inner join tcd.washer w on w.washerid=wt.washerID
+) d
+pivot
+(
+max(TagAddress)
+for tagtype in (Tag_FRM,Tag_INJ,Tag_OPC,Tag_AWEF,Tag_AWEC,Tag_EOF,Tag_MODE,Tag_FLSHT,Tag_ICLAS,Tag_INJRO,Tag_HOLD,
+Tag_TILT,Tag_SLING,Tag_AWEA,Tag_HOLDD,Tag_LOAD,Tag_RMAL,Tag_RML,Tag_WSNO)
+) piv;
+</Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC02_VerifyWasherTgasBeckoff" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>DryerForms</TableName>
+      <UniqueId>DryerId</UniqueId>
+      <Fields>DryerId</Fields>
+      <Query>Select * from DryersId</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigartion</DBName>
+      <TableName>DryerForms</TableName>
+      <UniqueId>DryerID</UniqueId>
+      <Fields>DryerId</Fields>
+      <Query>Select 8f rom DryerLoads</Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

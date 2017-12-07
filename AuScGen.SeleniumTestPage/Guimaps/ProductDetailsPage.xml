@@ -1,0 +1,8 @@
+<ObjectRepository>
+<FeatureSet name='ProductDtailsPage'>
+	<Element type='SpanArea' name='WebProductName'>
+		<id>Name_ileinner</id>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+</FeatureSet>
+</ObjectRepository>

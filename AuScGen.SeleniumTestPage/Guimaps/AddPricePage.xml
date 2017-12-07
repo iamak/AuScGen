@@ -1,0 +1,16 @@
+<ObjectRepository>
+<FeatureSet name='AddPricePage'>
+	<Element type='Textbox' name='TxtPrice'>
+		<id>td0_2</id>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+	<Element type='Checkbox' name='CheckActive'>
+		<id>td0_4</id>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+	<Element type='Button' name='BtnSave'>
+		<xpath>//input[@name='save']</xpath>
+		<PageTitle>UMPS JS frame</PageTitle>
+	</Element>
+</FeatureSet>
+</ObjectRepository>

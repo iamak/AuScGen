@@ -1,0 +1,8 @@
+<ObjectRepository>
+<FeatureSet name='ProductsPage'>
+    <Element type='Button' name='BtnNewProducts'>
+      <xpath>(//input[@class = 'btn'])[5]</xpath>
+      <PageTitle>UMPS JS frame</PageTitle>
+    </Element>
+</FeatureSet>
+</ObjectRepository>

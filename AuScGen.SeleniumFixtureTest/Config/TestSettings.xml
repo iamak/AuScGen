@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestSettings>
+  <TestSetting>
+    <Browser>Firefox</Browser>
+  </TestSetting>
+  <TestSetting>
+    <Url>http://www.salesforce.com/</Url>
+    <!--<Url>http://10.50.2.71/ProwessWebCRM#</Url>-->   
+  </TestSetting>
+  <TestSetting>
+    <DBConnection>Data Source=HYD-ECOLABDB\SQLExpress;Initial Catalog=ConduitLocalAlpha1QA;User ID=tcddev;Password=Agstcd@1</DBConnection>    
+  </TestSetting>
+  <TestSetting>
+    <GetByFilterAPI>http://hyd-ecolabweb5:9999/Api/TrendingChart/GetByFilters?</GetByFilterAPI>
+  </TestSetting>
+  <TestSetting>
+    <MaxTimeoutValue>80000</MaxTimeoutValue>	
+  </TestSetting>
+  <TestSetting>
+    <UserViewMode>false</UserViewMode>
+  </TestSetting>
+</TestSettings>
+ 

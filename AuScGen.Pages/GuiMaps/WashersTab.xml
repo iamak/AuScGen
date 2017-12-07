@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Washers Localization Controls">
+    <Element name="SelectPreferredLanguage" type="HtmlControl">
+      <id>ddlLanguages</id>
+    </Element>
+    <Element name="btnUpload" type="HtmlInputButton">
+      <atribute>id=btnSave</atribute>
+    </Element>
+    <Element name="ddlModel" type="HtmlSelect">
+      <id>ddlModel</id>
+    </Element>
+    <Element name="txtName" type="HtmlInputText">
+      <id>txtName</id>
+    </Element>
+    <Element name="ddlController" type="HtmlSelect">
+      <id>ddlController</id>
+    </Element>
+    <Element name="ddlWasherMode" type="HtmlSelect">
+      <id>ddlWasherMode</id>
+    </Element>
+    <Element name="txtPlantWasher" type="HtmlControl">
+      <id>txtPlantWasher</id>
+    </Element>
+    <Element name="txtProgramNo" type="HtmlControl">
+      <id>txtProgramNo</id>
+    </Element>
+    <Element name="WashersListGridHeader" type="HtmlControl">
+      <xpath>.//*[@id='tblWashers']/thead/tr</xpath>
+    </Element>
+    <Element name="WashersListGridTable" type="HtmlControl">
+      <xpath>.//*[@id='tblWashers']</xpath>
+    </Element>
+    <Element name="SuccessValidationMessage" type="HtmlControl">
+      <class>k-success-message</class>
+    </Element>
+    <Element name="btnSaveTunnel" type="HtmlButton">
+      <id>btnSaveTunnel</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="btnOkDelete" type="HtmlButton">
+      <xpath>//button[contains(text(),'Ok')]</xpath>
+    </Element>
+    <Element name="btnCancelDelete" type="HtmlButton">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>
+    <Element name="btnYesPopUp" type="HtmlButton">
+      <xpath>//button[contains(text(),'Yes')]</xpath>
+    </Element>
+    <Element name="btnNoPopUp" type="HtmlButton">
+      <xpath>//button[contains(text(),'No')]</xpath>
+    </Element>
+    <Element name="btnBacktoWashersLink" type="HtmlButton">
+      <xpath>//span[contains(text(),'Back to Washers')]</xpath>
+    </Element>
+    <Element name="tabWashers" type="HtmlAnchor">
+      <id>tabWashersList</id>
+    </Element>
+    <Element name="lblSuccessMsg" type="HtmlControl">
+      <name>//*[@id="divMessage"]/label</name>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

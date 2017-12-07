@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Sensors Tab Controls">
+    <Element name="tabSensors" type="HtmlControl">
+      <id>tabSensor</id>
+    </Element>
+    <Element name="lblAddedSuccess" type="HtmlControl">
+      <class>k-success-message</class>
+    </Element>
+    <Element name="SensorTabGrid" type="HtmlControl">
+      <xpath>.//*[@id='gridSensor']/div[3]/table</xpath>
+    </Element>
+    <Element name="btnAddSensor" type="HtmlControl">
+      <xpath>//span[contains(text(),'Add Sensor')]</xpath>
+    </Element>
+    <Element name="btnEditSave" type="HtmlControl">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="txtAddSensorName" type="HtmlControl">
+      <id>txtAddSensorName</id>
+    </Element>
+    <Element name="txtEditSensorName" type="HtmlControl">
+      <id>txtSensorName</id>
+    </Element>
+    <Element name="txtInlinEditSensorName" type="HtmlControl">
+      <name>SensorName</name>
+    </Element>
+    <Element name="txtCalibration" type="HtmlControl">
+      <name>Calibration</name>
+    </Element>
+    <Element name="ddlSensorType" type="HtmlControl">
+      <id>ddlAddSensorTypeName</id>
+    </Element>
+    <Element name="ddlSensorLocation" type="HtmlControl">
+      <id>ddlAddSensorLocation</id>
+    </Element>
+    <Element name="ddlAddMachineName" type="HtmlControl">
+      <id>ddlAddMachineName</id>
+    </Element>
+    <Element name="ddlAddOutPutType" type="HtmlControl">
+      <id>ddlAddOutPutType</id>
+    </Element>
+    <Element name="txtAddCalibration" type="HtmlControl">
+      <id>txtAddCalibration</id>
+    </Element>
+    <Element name="ddlAddUoM" type="HtmlControl">
+      <id>ddlAddUoM</id>
+    </Element>
+    <Element name="ddlAddSensorController" type="HtmlControl">
+      <id>ddlAddSensorController</id>
+    </Element>
+    <Element name="ddlEditSensorController" type="HtmlControl">
+      <id>ddlSensorController</id>
+    </Element>
+    <Element name="ddlAddChemicalForChart" type="HtmlControl">
+      <id>ddlAddChemicalForChart</id>
+    </Element>
+    <Element name="txtAddAnalogueImputNumber" type="HtmlControl">
+      <id>txtAddAnalogueImputNumber</id>
+    </Element>
+    <Element name="btnUpdate" type="HtmlControl">
+      <id>btnUpdate</id>
+    </Element>
+    <Element name="lblErrorMsg" type="HtmlControl">
+      <id>errorMessageAdd</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlControl">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="lblAddMachineCompartment" type="HtmlControl">
+      <id>lblAddMachineCompartment</id>
+    </Element>
+    <Element name="ddlLanguages" type="HtmlControl">
+      <id>ddlLanguages</id>
+    </Element>   
+    <Element name="GeneralbtnSave" type="HtmlControl">
+      <id>btnSave</id>
+    </Element>
+    <Element name="popupEditor_wnd_title" type="HtmlControl">
+      <id>popupEditor_wnd_title</id>
+    </Element>
+    <Element name="breadCrumbContainer" type="HtmlControl">
+      <id>breadCrumbContainer</id>
+    </Element>
+    <Element name="SensorsEditLabel" type="HtmlLabel">
+      <xpath>//span[contains(text(),'Edit Sensor')]</xpath>
+    </Element>
+    <Element name="SensorsViewLabel" type="HtmlLabel">
+      <xpath>//span[contains(text(),'View Sensor')]</xpath>
+    </Element>
+    <Element name="UserRolesSensorsTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridSensor']/div[2]/table</xpath>
+    </Element>
+    <Element name="UtilityContainerTabs" type="HtmlControl">
+      <id>tabUtilitiesContainer</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

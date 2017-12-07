@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ObjectRepository>
+	<FeatureSet name="General Tab Controls">
+		<Element name="SelectPreferredLanguage" type="HtmlControl">
+			<id>ddlLanguages</id>
+		</Element>
+		<Element name="SelectDBLiveTimeYears" type="HtmlControl">
+			<id>txtDataLiveTime</id>
+		</Element>
+		<Element name="SelectPreferredCurrency" type="HtmlControl">
+			<id>ddlCurrencyCodes</id>
+		</Element>
+		<Element name="SelectBudgetCustomerFlatFee" type="HtmlControl">
+			<id>ddlBudgetCustomer</id>
+		</Element>
+		<Element name="txtDatabaseExportPath" type="HtmlInputText">
+			<id>txtexportpath</id>
+		</Element>
+		<Element name="SelectUOM" type="HtmlControl">
+			<id>ddlUoms</id>
+		</Element>
+		<Element name="btnSaveUserPreferences" type="HtmlInputButton">
+			<id>btnSave</id>
+		</Element>
+		<Element name="imgUpload" type="HtmlInputFile">
+			<name>uploadimage</name>
+		</Element>
+		<Element name="btnUpload" type="HtmlInputButton">
+			<atribute>id=btnSave</atribute>
+		</Element>
+		<Element name="lblSuccess" type="HtmlDiv">
+			<xpath>//span[contains(text(),'Saved Successfully')]</xpath>
+		</Element>
+		<Element name="btnCancel" type="HtmlInputButton">
+			<id>btnCancel</id>
+		</Element>
+		<Element name="btnSaveNo" type="HtmlInputButton">
+			<id>imbNo</id>
+		</Element>
+		<Element name="btnSaveYes" type="HtmlInputButton">
+			<id>imbOk</id>
+		</Element>
+    <Element name="btnSaveYesPopUp" type="HtmlInputButton">
+      <id>imbYes</id>
+    </Element>
+		<Element name="lblHomepage" type="HtmllDiv">
+			<xpath>//div[contains(text(),'Conduit Portlet')]</xpath>
+		</Element>
+		<Element name="lnkSetup" type="HtmlAnchor">
+			<id>tabPlantSetup</id>
+		</Element>
+		<Element name="lblNyorsk" type="HtmlAnchor">
+			<xpath>//span[contains(text(),'nynorsk')]</xpath>
+		</Element>
+    <Element name="homeTab" type="HtmlButton">
+      <xpath>//span[contains(text(),'Home')]</xpath>
+    </Element>
+  </FeatureSet>
+	<FeatureSet name="TCD landing Page">
+		<Element name="btnTCDTopNav" type="HtmlControl">
+			<id>topnav</id>
+		</Element>
+		<Element name="spnWelcome" type="HtmlControl">
+			<xpath>//span[contains(text(),'Welcome')]</xpath>
+		</Element>
+		<Element name="spnLogout" type="HtmlControl">
+			<xpath>//span[contains(text(),'Logout')]</xpath>
+		</Element>
+	</FeatureSet>
+</ObjectRepository>

@@ -1,0 +1,42 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyControllersTagsData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>ultrax</TableName>
+      <UniqueId>ultrax_name</UniqueId>
+      <Fields>ultrax_name,MF_DDE_LINK,MI_DDE_LINK,MC_DDE_LINK,MV_DDE_LINK,FS_DDE_LINK,SC_DDE_LINK,PREF_DDE_LINK,POSF_DDE_LINK,VALID_LINK,MNFD_LINK,AW_LINK,NAME_LINK,MODULES_LINK,YEAR_LINK,DAY_LINK,HOUR_LINK,MINUTE_LINK,SECOND_LINK,SLING_SCALE_LINK,SLING_DROP_LINK,SLING_USED_LINK,RATIO_ACTIVE_LINK,MONTH_LINK </Fields>
+      <Query>select ultrax_name,MF_DDE_LINK,MI_DDE_LINK,MC_DDE_LINK,MV_DDE_LINK,FS_DDE_LINK,SC_DDE_LINK,PREF_DDE_LINK,POSF_DDE_LINK,VALID_LINK,MNFD_LINK,AW_LINK,
+NAME_LINK,MODULES_LINK,YEAR_LINK,DAY_LINK,HOUR_LINK,MINUTE_LINK,SECOND_LINK,SLING_SCALE_LINK,SLING_DROP_LINK,SLING_USED_LINK,RATIO_ACTIVE_LINK,MONTH_LINK from ultrax
+</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.ControllerTags</TableName>
+      <UniqueId>topicname</UniqueId>
+      <Fields>topicname,Tag_MWF,Tag_MFI,Tag_MIC,Tag_MVLV,Tag_SUBF,Tag_SC,
+Tag_PREF ,Tag_POSF,Tag_VALID,Tag_MNFD ,Tag_AWEE ,Tag_NAME,
+Tag_MOD,Tag_YEAR,Tag_DAY,Tag_HOUR,Tag_MIN,Tag_SSL,
+Tag_SDL,Tag_SUL,Tag_RATD,Tag_MNTH</Fields>
+      <Query>select topicname,Tag_MWF,Tag_MFI,Tag_MIC,Tag_MVLV, 
+Tag_SUBF,Tag_SC,Tag_PREF ,Tag_POSF,Tag_VALID,Tag_MNFD ,Tag_AWEE ,Tag_NAME,
+Tag_MOD,Tag_YEAR,Tag_DAY,Tag_HOUR,Tag_MIN,Tag_SSL,Tag_SDL,Tag_SUL, 
+Tag_RATD,Tag_MNTH
+from
+(
+select distinct cc.ControllerId,cc.topicname,ct.TagType,ct.TagAddress from tcd.ConduitController cc
+inner join tcd.ControllerTags ct on ct.ControllerId=cc.ControllerId 
+inner join tcd.tagtype tt on tt.TagType=ct.TagType 
+where cc.ControllerId=4 
+) d
+pivot
+(
+max(TagAddress)
+for tagtype in (Tag_MWF,Tag_MFI,Tag_MIC,Tag_MVLV, 
+Tag_SUBF,Tag_SC,Tag_PREF ,Tag_POSF,Tag_VALID,Tag_MNFD ,Tag_AWEE ,Tag_NAME,
+Tag_MOD,Tag_YEAR,Tag_DAY,Tag_HOUR,Tag_MIN,Tag_SSL,Tag_SDL,Tag_SUL, 
+Tag_RATD,Tag_MNTH)
+) piv;
+</Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

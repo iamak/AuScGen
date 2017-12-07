@@ -1,0 +1,13 @@
+﻿body {
+    
+    background-image: url('Images/road_ahead.jpg');
+    background-repeat: no-repeat;
+}
+
+.textColor {
+    color: #f7f7f7;
+}
+
+.messageColor {
+    color: #7FFF00;
+}

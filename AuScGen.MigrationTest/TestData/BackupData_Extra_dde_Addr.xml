@@ -1,0 +1,450 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_Verifyextra_dde_addr" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>extra_dde_addr</TableName>
+      <UniqueId>ultrax</UniqueId>
+      <Fields>ultrax,address</Fields>
+      <Query>SELECT ultrax,address from extra_dde_addr</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.extra_dde_addr</TableName>
+      <UniqueId>ultrax</UniqueId>
+      <Fields>ultrax,address</Fields>
+      <Query>
+        select ultrax,address  from tcd.CWextra_dde_addr
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC02_VerifyExtra_dde_data" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>extra_dde_data</TableName>
+      <UniqueId>ultrax</UniqueId>
+      <Fields>ultrax,address,datetime,value </Fields>
+      <Query>SELECT ultrax,address,datetime,value from extra_dde_data</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWextra_dde_data</TableName>
+      <UniqueId>ultrax</UniqueId>
+      <Fields>ultrax,address,datetime,value </Fields>
+      <Query>
+        select ultrax,address,datetime,value from tcd.CWextra_dde_data
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC03_VerifySrcttCheckData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srcttcheck</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid,washer,formdesc,step,status</Fields>
+      <Query>SELECT srid, washer, formdesc, step, status from srcttcheck</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrcttcheck</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>SRID,WASHER,FORMDESC,STEP,STATUS</Fields>
+      <Query>
+        select SRID,WASHER,FORMDESC,STEP,STATUS from tcd.CWsrcttcheck
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC04_VerifySrheaderData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srheader</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>
+        srid,inv_rep_stop, report_start, report_stop, target_lbs, target_clean_lbs, actual_lbs,
+        actual_clean_lbs, use_soiled_lbs, op_eff,op_eff_ll,load_eff,inc_ponies,op_eff_tunnel,op_eff_ll_tunnel,
+        load_eff_tunnel
+      </Fields>
+      <Query>SELECT srid, company, address, contact, contact_phone, tsn_no, tsn_name, start_date, duration, last_date, onsite, next_date, next_onsite, entrance_interview, follow_up, opportunities, nonroutine_service, exit_name, exit_position, exit_date, logo_file, inv_rep_start, inv_rep_stop, report_start, report_stop, target_lbs, target_clean_lbs, actual_lbs, actual_clean_lbs, use_soiled_lbs, op_eff, op_eff_ll, load_eff, load_eff_ll, inc_ponies, op_eff_tunnel, op_eff_ll_tunnel, load_eff_tunnel, load_eff_ll_tunnel, chem_tgt_cwt, chem_act_cwt, water_usage, gas_usage, electric_usage, lfs_procparm, lfs_proctext, washer_procparm, washer_proctext, soil_procparm, soil_proctext, garmtunnel_procparm, garmtunnel_proctext, flatwork_procparm, flatwork_proctext, bulkitems_procparm, bulkitems_proctext, water_procparm, water_proctext, titration_procparm, titration_proctext, bleach_pct, prt_conv_loadeff, prt_conv_opeff, prt_tunnel_loadeff, prt_tunnel_opeff, prt_total_opeff, prt_total_loadeff, prt_overall_eff, prt_actual_cwt, prt_target_cwt, prt_gas, prt_water, prt_electric, prt_convloadeff_rep, prt_convopeff_rep, prt_tunloadeff_rep, prt_tunopeff_rep, prt_allloadeff_rep, prt_inv_rep, closed, pdf_report from srheader</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrheader</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>
+        srid,inv_rep_stop, report_start, report_stop, target_lbs, target_clean_lbs, actual_lbs,
+        actual_clean_lbs, use_soiled_lbs, op_eff,op_eff_ll,load_eff,inc_ponies,op_eff_tunnel,op_eff_ll_tunnel,
+        load_eff_tunnel
+      </Fields>
+      <Query>
+        select SRID,Company,address,contact,contact_phone,tsn_no,tsn_name,start_date,duration,last_date,onsite,next_date,  next_onsite,entrance_interview,follow_up,opportunities,nonroutine_service,exit_Name,exit_position,exit_date,logo_file,       inv_rep_start,inv_rep_stop,report_start,report_stop,target_lbs,target_clean_lbs,actual_lbs,actual_clean_lbs,use_soiled_lbs,        op_eff,op_eff_ll,load_eff,op_eff_ll,inc_ponies,op_eff_tunnel,op_eff_ll_tunnel,load_eff_tunnel,op_eff_ll_tunnel,chem_tgt_cwt,        chem_act_cwt,water_usage,gas_usage,electric_usage,lfs_procparm,lfs_proctext,washer_procparm,washer_proctext,soil_procparm,        soil_proctext,garmtunnel_procparm,garmtunnel_proctext,flatwork_procparm,flatwork_proctext,bulkitems_procparm,bulkitems_proctext,water_procparm,        water_proctext,titration_procparm,titration_proctext,bleach_pct,prt_conv_loadeff,prt_conv_opeff,prt_tunnel_loadeff,prt_tunnel_opeff,        prt_total_opeff,prt_total_loadeff,prt_overall_eff,prt_actual_cwt,prt_target_cwt,prt_gas,prt_water,prt_electric,prt_convloadeff_rep,        prt_convopeff_rep,prt_tunloadeff_rep,prt_tunopeff_rep,prt_allloadeff_rep,prt_inv_rep,closed,pdf_report from tcd.CWsrheader
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC05_VerifySrheatrecData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srheatrec</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid,description,operating,readtime,wastein,wasteout,freshin,freshout,rise,approach</Fields>
+      <Query>SELECT srid, description, operating, readtime, wastein, wasteout, freshin, freshout, rise, approach from srheatrec</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrheatrec</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>SRID,Description,OPERATING,READTIME,WASTEIN,WASTEOUT,FRESHIN,FRESHOUT,RISE,APPROACH</Fields>
+      <Query>
+        select SRID,Description,OPERATING,READTIME,WASTEIN,WASTEOUT,FRESHIN,FRESHOUT,RISE,APPROACH  from tcd.CWsrheatrec
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC06_VerifySrironersData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srironers</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, module, description, poor_quality </Fields>
+      <Query>SELECT srid, module, description, poor_quality from srironers</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrironers</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, module, description, poor_quality </Fields>
+      <Query>
+        select srid, module, description, poor_quality from tcd.CWsrironers
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC07_VerifySrlfsChkdetData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srlfschkdet</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, nseq1, nseq2, condition1, lfs1, lfs2, lfs3, lfs4, lfs5, lfs6, lfs7, lfs8, lfs9, lfs10, cfldtype </Fields>
+      <Query>SELECT srid, nseq1, nseq2, condition1, lfs1, lfs2, lfs3, lfs4, lfs5, lfs6, lfs7, lfs8, lfs9, lfs10, cfldtype from srlfschkdet</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrlfschkdet</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, nseq1, nseq2, condition1, lfs1, lfs2, lfs3, lfs4, lfs5, lfs6, lfs7, lfs8, lfs9, lfs10, cfldtype </Fields>
+      <Query>
+        select srid, nseq1, nseq2, condition1, lfs1, lfs2, lfs3, lfs4, lfs5, lfs6, lfs7, lfs8, lfs9, lfs10, cfldtype from tcd.CWsrlfschkdet
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC08_VerifySrlfsChkhdData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srlfschkhd</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, lfsname1, lfsdes1, lfsname2, lfsdes2, lfsname3, lfsdes3, lfsname4, lfsdes4, lfsname5, lfsdes5, lfsname6, lfsdes6, lfsname7, lfsdes7, lfsname8, lfsdes8, lfsname9, lfsdes9, lfsname10, lfsdes10, numoflfs</Fields>
+      <Query>select srid, lfsname1, lfsdes1, lfsname2, lfsdes2, lfsname3, lfsdes3, lfsname4, lfsdes4, lfsname5, lfsdes5, lfsname6, lfsdes6, lfsname7, lfsdes7, lfsname8, lfsdes8, lfsname9, lfsdes9, lfsname10, lfsdes10, numoflfs from srlfschkhd</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrlfschkhd</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, lfsname1, lfsdes1, lfsname2, lfsdes2, lfsname3, lfsdes3, lfsname4, lfsdes4, lfsname5, lfsdes5, lfsname6, lfsdes6, lfsname7, lfsdes7, lfsname8, lfsdes8, lfsname9, lfsdes9, lfsname10, lfsdes10, numoflfs</Fields>
+      <Query>
+        select srid, lfsname1, lfsdes1, lfsname2, lfsdes2, lfsname3, lfsdes3, lfsname4, lfsdes4, lfsname5, lfsdes5, lfsname6, lfsdes6, lfsname7, lfsdes7, lfsname8, lfsdes8, lfsname9, lfsdes9, lfsname10, lfsdes10, numoflfs from tcd.CWsrlfschkhd
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC09_VerifySrlfspartsData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srlfsparts</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, lfs_unit, part, replacedate, reason, diverter, flush_washer, valve </Fields>
+      <Query>SELECT srid, lfs_unit, part, replacedate, reason, diverter, flush_washer, valve from srlfsparts</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrlfsparts</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, lfs_unit, part, replacedate, reason, diverter, flush_washer, valve </Fields>
+      <Query>
+        select srid, lfs_unit, part, replacedate, reason, diverter, flush_washer, valve from tcd.CWsrlfsparts
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC10_VerifySrsteamData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srsteam</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, module, description, poor_quality, temp_set_point, temp_fabric </Fields>
+      <Query>SELECT srid, module, description, poor_quality, temp_set_point, temp_fabric from srsteam</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigartion</DBName>
+      <TableName>tcd.CWsrsteam</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, module, description, poor_quality, temp_set_point, temp_fabric </Fields>
+      <Query>
+        select srid, module, description, poor_quality, temp_set_point, temp_fabric from tcd.CWsrsteam
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC11_VerifySrtitrtdetData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srtitrtdet</TableName>
+      <UniqueId>module</UniqueId>
+      <Fields>module, class_form, alky_drops, alyy_ppm, ph, bleachdrop, bleachppm, act_temp, target_tmp, drain, waterlvl, chem01, chem02, chem03, chem04, chem05, chem06, chem07, chem08, chem09, chem10, chem11, chem12, chem13, chem14, chem15, srid, ttid</Fields>
+      <Query>SELECT module, class_form, alky_drops, alyy_ppm, ph, bleachdrop, bleachppm, act_temp, target_tmp, drain, waterlvl, chem01, chem02, chem03, chem04, chem05, chem06, chem07, chem08, chem09, chem10, chem11, chem12, chem13, chem14, chem15, srid, ttid from srtitrtdet</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigartion</DBName>
+      <TableName>tcd.CWsrtitrtdet</TableName>
+      <UniqueId>module</UniqueId>
+      <Fields>module, class_form, alky_drops, alyy_ppm, ph, bleachdrop, bleachppm, act_temp, target_tmp, drain, waterlvl, chem01, chem02, chem03, chem04, chem05, chem06, chem07, chem08, chem09, chem10, chem11, chem12, chem13, chem14, chem15, srid, ttid </Fields>
+      <Query>
+        select module, class_form, alky_drops, alyy_ppm, ph, bleachdrop, bleachppm, act_temp, target_tmp, drain, waterlvl, chem01, chem02, chem03, chem04, chem05, chem06, chem07, chem08, chem09, chem10, chem11, chem12, chem13, chem14, chem15, srid, ttid from tcd.CWsrtitrtdet
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC12_VerifySrtitrthdData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srtitrthd</TableName>
+      <UniqueId>washer</UniqueId>
+      <Fields>washer, wt_target, wdescription, wt_actual, dt, current, revised, runtime_gt, waterrate, waterused, bleachfactor, op_class, formula, nchambers, nchems, chemsku01, chemsku02, chemsku03, chemsku04, chemsku05, chemsku06, chemsku07, chemsku08, chemsku09, chemsku10, chemsku11, chemsku12, chemsku13, chemsku14, chemsku15, chemdes01, chemdes02, chemdes03, chemdes04, chemdes05, chemdes06, chemdes07, chemdes08, chemdes09, chemdes10, chemdes11, chemdes12, chemdes13, chemdes14, chemdes15, srid, ttid, reportprint</Fields>
+      <Query>SELECT washer, wt_target, wdescription, wt_actual, dt, current, revised, runtime_gt, waterrate, waterused, bleachfactor, op_class, formula, nchambers, nchems, chemsku01, chemsku02, chemsku03, chemsku04, chemsku05, chemsku06, chemsku07, chemsku08, chemsku09, chemsku10, chemsku11, chemsku12, chemsku13, chemsku14, chemsku15, chemdes01, chemdes02, chemdes03, chemdes04, chemdes05, chemdes06, chemdes07, chemdes08, chemdes09, chemdes10, chemdes11, chemdes12, chemdes13, chemdes14, chemdes15, srid, ttid, reportprint from srtitrthd</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrtitrthd</TableName>
+      <UniqueId>washer</UniqueId>
+      <Fields>washer, wt_target, wdescription, wt_actual, dt, current, revised, runtime_gt, waterrate, waterused, bleachfactor, op_class, formula, nchambers, nchems, chemsku01, chemsku02, chemsku03, chemsku04, chemsku05, chemsku06, chemsku07, chemsku08, chemsku09, chemsku10, chemsku11, chemsku12, chemsku13, chemsku14, chemsku15, chemdes01, chemdes02, chemdes03, chemdes04, chemdes05, chemdes06, chemdes07, chemdes08, chemdes09, chemdes10, chemdes11, chemdes12, chemdes13, chemdes14, chemdes15, srid, ttid, reportprint</Fields>
+      <Query>
+        select washer, wt_target, wdescription, wt_actual, dt, [current], revised, runtime_gt, waterrate, waterused, bleachfactor, op_class, formula, nchambers, nchems, chemsku01, chemsku02, chemsku03, chemsku04, chemsku05, chemsku06, chemsku07, chemsku08, chemsku09, chemsku10, chemsku11, chemsku12, chemsku13, chemsku14, chemsku15, chemdes01, chemdes02, chemdes03, chemdes04, chemdes05, chemdes06, chemdes07, chemdes08, chemdes09, chemdes10, chemdes11, chemdes12, chemdes13, chemdes14, chemdes15, srid, ttid, reportprint from tcd.CWsrtitrthd
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC13_VerifySrttcheckData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srttcheck</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, washer, formdesc, step, tunnelmod, status</Fields>
+      <Query>SELECT srid, washer, formdesc, step, tunnelmod, status from srttcheck</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName> tcd.cwsrttcheck</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, washer, formdesc, step, tunnelmod, status</Fields>
+      <Query>SELECT srid, washer, formdesc, step, tunnelmod, status from tcd.cwsrttcheck</Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC14_VerifySrttformData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srttform</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, ttid, washer, wdescription, op_class, formula, fdescription, target_weight, actual_weight, dt, current, revised, bleachfactor, reportprint</Fields>
+      <Query>SELECT srid, ttid, washer, wdescription, op_class, formula, fdescription, target_weight, actual_weight, dt, current, revised, bleachfactor, reportprint  from srttform</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.cwsrttform</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, ttid, washer, wdescription, op_class, formula, fdescription, target_weight, actual_weight, dt, current, revised, bleachfactor, reportprint</Fields>
+      <Query>SELECT srid, ttid, washer, wdescription, op_class, formula, fdescription, target_weight, actual_weight, dt, [current], revised, bleachfactor, reportprint  from tcd.cwsrttform</Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC15_VerifySrttstepsData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srttsteps</TableName>
+      <UniqueId>ttid</UniqueId>
+      <Fields>ttid, step, operation, time, water_temp, actual_temp, water_level, actual_level, chemicals, ph, alk_drops, alk_ppm, chlor_drops, chlor_ppm</Fields>
+      <Query>SELECT ttid, step, operation, time, water_temp, actual_temp, water_level, actual_level, chemicals, ph, alk_drops, alk_ppm, chlor_drops, chlor_ppm from srttsteps</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.cwsrttsteps</TableName>
+      <UniqueId>ttid</UniqueId>
+      <Fields>ttid, step, operation, time, water_temp, actual_temp, water_level, actual_levelt, chemicals, ph, alk_drops, alk_ppm, chlor_drops, chlor_ppm</Fields>
+      <Query>
+        SELECT ttid, step, operation, time, water_temp, actual_temp, water_level, actual_levelt, chemicals, ph, alk_drops, alk_ppm, chlor_drops, chlor_ppm from tcd.cwsrttsteps
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC16_VerifySrtunchkdesData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srtunchkdes</TableName>
+      <UniqueId>nseq1</UniqueId>
+      <Fields>nseq1, nseq2, condition, crectype, cfldtype</Fields>
+      <Query>SELECT nseq1, nseq2, condition, crectype, cfldtype from srtunchkdes</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName> tcd.cwsrtunchkdes</TableName>
+      <UniqueId>nseq1</UniqueId>
+      <Fields>nseq1, nseq2, condition, crectype, cfldtype</Fields>
+      <Query>
+        SELECT nseq1, nseq2, condition, crectype, cfldtype from tcd.cwsrtunchkdes
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC17_VerifySrtunchkdes_iniData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srtunchkdes_ini</TableName>
+      <UniqueId>nseq1</UniqueId>
+      <Fields>nseq1, nseq2, condition, crectype, cfldtype, mod_date </Fields>
+      <Query>
+        SELECT nseq1, nseq2, condition, crectype, cfldtype, mod_date from srtunchkdes_ini
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrtunchkdes_ini</TableName>
+      <UniqueId>nseq1</UniqueId>
+      <Fields>nseq1, nseq2, condition, crectype, cfldtype, mod_date </Fields>
+      <Query>
+        SELECT nseq1, nseq2, condition, crectype, cfldtype, mod_date from tcd.CWsrtunchkdes_ini
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC18_VerifySrtunchkdetData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srtunchkdet</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, nseq1, nseq2, condition1, ltunnel1, ltunnel2, ltunnel3, ltunnel4, ltunnel5, ltunnel6, ltunnel7, ltunnel8, ltunnel9, ltunnel10, cfldtype </Fields>
+      <Query>
+        SELECT srid, nseq1, nseq2, condition1, ltunnel1, ltunnel2, ltunnel3, ltunnel4, ltunnel5, ltunnel6, ltunnel7, ltunnel8, ltunnel9, ltunnel10, cfldtype from srtunchkdet
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrtunchkdet</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, nseq1, nseq2, condition1, ltunnel1, ltunnel2, ltunnel3, ltunnel4, ltunnel5, ltunnel6, ltunnel7, ltunnel8, ltunnel9, ltunnel10, cfldtype </Fields>
+      <Query>
+        SELECT srid, nseq1, nseq2, condition1, ltunnel1, ltunnel2, ltunnel3, ltunnel4, ltunnel5, ltunnel6, ltunnel7, ltunnel8, ltunnel9, ltunnel10, cfldtype from tcd.CWsrtunchkdet
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC19_VerifySrtunchkhdData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srtunchkhd</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, washer1, wdescr1, washer2, wdescr2, washer3, wdescr3, washer4, wdescr4, washer5, wdescr5, washer6, wdescr6, washer7, wdescr7, washer8, wdescr8, washer9, wdescr9, washer10, wdescr10, numofwash</Fields>
+      <Query>
+        SELECT srid, washer1, wdescr1, washer2, wdescr2, washer3, wdescr3, washer4, wdescr4, washer5, wdescr5, washer6, wdescr6, washer7, wdescr7, washer8, wdescr8, washer9, wdescr9, washer10, wdescr10, numofwash from srtunchkhd
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrtunchkhd</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, washer1, wdescr1, washer2, wdescr2, washer3, wdescr3, washer4, wdescr4, washer5, wdescr5, washer6, wdescr6, washer7, wdescr7, washer8, wdescr8, washer9, wdescr9, washer10, wdescr10, numofwash</Fields>
+      <Query>
+        SELECT srid, washer1, wdescr1, washer2, wdescr2, washer3, wdescr3, washer4, wdescr4, washer5, wdescr5, washer6, wdescr6, washer7, wdescr7, washer8, wdescr8, washer9, wdescr9, washer10, wdescr10, numofwash from tcd.CWsrtunchkhd
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC20_VerifySrwaterData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srwater</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, watertype, temperature, hardness, bicarb, iron, chlorine, turbidity, tds, ph, odor </Fields>
+      <Query>
+        SELECT srid, watertype, temperature, hardness, bicarb, iron, chlorine, turbidity, tds, ph, odor from srwater order by srid asc
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrwater</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, watertype, temperature, hardness, bicarb, iron, chlorine, turbidity, tds, ph, odor </Fields>
+      <Query>
+        SELECT srid, watertype, temperature, hardness, bicarb, iron, chlorine, turbidity, tds, ph, odor from tcd.CWsrwater order by srid asc
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC21_VerifySrwfwashersData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srwfwashers</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, washer, wdescription, capacity, tunnel, hot_inlet, cold_inlet, reuse_valve, drain, steam_inlet, controller, level_control, temp_control, brakes, doors, rpm, extract, safety</Fields>
+      <Query>
+        SELECT srid, washer, wdescription, capacity, tunnel, hot_inlet, cold_inlet, reuse_valve, drain, steam_inlet, controller, level_control, temp_control, brakes, doors, rpm, extract, safety  from srwfwashers
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrwfwashers</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>srid, washer, wdescription, capacity, tunnel, hot_inlet, cold_inlet, reuse_valve, drain, steam_inlet, controller, level_control, temp_control, brakes, doors, rpm, extract, safety</Fields>
+      <Query>
+        SELECT srid, washer, wdescription, capacity, tunnel, hot_inlet, cold_inlet, reuse_valve, drain, steam_inlet, controller, level_control, temp_control, brakes, doors, rpm, extract, safety  from tcd.CWsrwfwashers
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC22_VerifyEtech_settingsData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>etech_settings</TableName>
+      <UniqueId>ACTIVE</UniqueId>
+      <Fields>active, server, topic, readinterval, cwupdateinterval, rp_sql, rp_dsn, rp_user, rp_pw, rp_read_mode</Fields>
+      <Query>SELECT active, server, topic, readinterval, cwupdateinterval, rp_sql, rp_dsn, rp_user, rp_pw, rp_read_mode from etech_settings</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWetech_settings</TableName>
+      <UniqueId>active</UniqueId>
+      <Fields>active, server, topic, readinterval, cwupdateinterval, rp_sql, rp_dsn, rp_user, rp_pw, rp_read_mode</Fields>
+      <Query>SELECT active, server, topic, readinterval, cwupdateinterval, rp_sql, rp_dsn, rp_user, rp_pw, rp_read_mode from tcd.CWetech_settings</Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC23_VerifyDailyactualsData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>dailyactuals</TableName>
+      <UniqueId>date</UniqueId>
+      <Fields>date, gasmeter, gas, watermeter, water, electricmeter, electric, metergroup</Fields>
+      <Query>SELECT date, gasmeter, gas, watermeter, water, electricmeter, electric, metergroup from dailyactuals</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.cwdailyactuals</TableName>
+      <UniqueId>date</UniqueId>
+      <Fields>date, gasmeter, gas, watermeter, water, electricmeter, electric, metergroup</Fields>
+      <Query>SELECT date, gasmeter, gas, watermeter, water, electricmeter, electric, metergroup from tcd.cwdailyactuals</Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC04_02_VerifySrheaderData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>srheader</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>
+        srid,nonroutine_service, exit_name, exit_position, exit_date, logo_file, inv_rep_start, inv_rep_stop,
+        report_start, report_stop, target_lbs, target_clean_lbs, actual_lbs, actual_clean_lbs, use_soiled_lbs
+      </Fields>
+      <Query>SELECT srid, company, address, contact, contact_phone, tsn_no, tsn_name, start_date, duration, last_date, onsite, next_date, next_onsite, entrance_interview, follow_up, opportunities, nonroutine_service, exit_name, exit_position, exit_date, logo_file, inv_rep_start, inv_rep_stop, report_start, report_stop, target_lbs, target_clean_lbs, actual_lbs, actual_clean_lbs, use_soiled_lbs, op_eff, op_eff_ll, load_eff, load_eff_ll, inc_ponies, op_eff_tunnel, op_eff_ll_tunnel, load_eff_tunnel, load_eff_ll_tunnel, chem_tgt_cwt, chem_act_cwt, water_usage, gas_usage, electric_usage, lfs_procparm, lfs_proctext, washer_procparm, washer_proctext, soil_procparm, soil_proctext, garmtunnel_procparm, garmtunnel_proctext, flatwork_procparm, flatwork_proctext, bulkitems_procparm, bulkitems_proctext, water_procparm, water_proctext, titration_procparm, titration_proctext, bleach_pct, prt_conv_loadeff, prt_conv_opeff, prt_tunnel_loadeff, prt_tunnel_opeff, prt_total_opeff, prt_total_loadeff, prt_overall_eff, prt_actual_cwt, prt_target_cwt, prt_gas, prt_water, prt_electric, prt_convloadeff_rep, prt_convopeff_rep, prt_tunloadeff_rep, prt_tunopeff_rep, prt_allloadeff_rep, prt_inv_rep, closed, pdf_report from srheader</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.CWsrheader</TableName>
+      <UniqueId>srid</UniqueId>
+      <Fields>
+        srid,nonroutine_service, exit_name, exit_position, exit_date, logo_file, inv_rep_start, inv_rep_stop,
+        report_start, report_stop, target_lbs, target_clean_lbs, actual_lbs, actual_clean_lbs, use_soiled_lbs
+      </Fields>
+      <Query>
+        select SRID,Company,address,contact,contact_phone,tsn_no,tsn_name,start_date,duration,last_date,onsite,next_date,  next_onsite,entrance_interview,follow_up,opportunities,nonroutine_service,exit_Name,exit_position,exit_date,logo_file,       inv_rep_start,inv_rep_stop,report_start,report_stop,target_lbs,target_clean_lbs,actual_lbs,actual_clean_lbs,use_soiled_lbs,        op_eff,op_eff_ll,load_eff,op_eff_ll,inc_ponies,op_eff_tunnel,op_eff_ll_tunnel,load_eff_tunnel,op_eff_ll_tunnel,chem_tgt_cwt,        chem_act_cwt,water_usage,gas_usage,electric_usage,lfs_procparm,lfs_proctext,washer_procparm,washer_proctext,soil_procparm,        soil_proctext,garmtunnel_procparm,garmtunnel_proctext,flatwork_procparm,flatwork_proctext,bulkitems_procparm,bulkitems_proctext,water_procparm,        water_proctext,titration_procparm,titration_proctext,bleach_pct,prt_conv_loadeff,prt_conv_opeff,prt_tunnel_loadeff,prt_tunnel_opeff,        prt_total_opeff,prt_total_loadeff,prt_overall_eff,prt_actual_cwt,prt_target_cwt,prt_gas,prt_water,prt_electric,prt_convloadeff_rep,        prt_convopeff_rep,prt_tunloadeff_rep,prt_tunopeff_rep,prt_allloadeff_rep,prt_inv_rep,closed,pdf_report from tcd.CWsrheader
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

@@ -1,0 +1,20 @@
+﻿<script>
+var pieData = [
+{
+value: {0},
+color:"#FF0000",
+highlight: "#FF5A5E",
+label: "FAIL"
+},
+{
+value: {1},
+color: "#2CF808",
+highlight: "#34E555",
+label: "PASS"
+},
+];
+window.onload = function(){
+var ctx = document.getElementById("chart-area").getContext("2d");
+window.myPie = new Chart(ctx).Pie(pieData);
+};
+</script>

@@ -1,0 +1,103 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyControllersData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>Ultrax</TableName>
+      <UniqueId>ultrax_name</UniqueId>
+      <Fields>Ultrax_Name,description,max_classes,lfs_ic_enabled,lfs_ic_eaddr,lfs_ic_caddr,ratiometric,maxchemlen,updaterate,last_error_code </Fields>
+      <Query>
+        select Ultrax_Name,description,max_classes,lfs_ic_enabled,lfs_ic_eaddr,
+        lfs_ic_caddr,ratiometric,maxchemlen,updaterate,last_error_code from ultrax
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.ConduitController</TableName>
+      <UniqueId>topicname</UniqueId>
+      <Fields>topicname,DESCRIPTION,LFSInjectionClasses,LFSIntegrityCheck,LFSIntegrityAddress,LFSCounterAddress,RatioMetric,MaxChemLength,UpdateRate,LastErrorCode </Fields>
+      <Query>
+        select topicname,DESCRIPTION,LFSInjectionClasses,LFSIntegrityCheck,LFSIntegrityAddress,
+        LFSCounterAddress,RatioMetric,MaxChemLength,UpdateRate,LastErrorCode from TCD.ConduitController
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC02_VerifyControllerSetupdata" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>ultrax</TableName>
+      <UniqueId>Ultrax_Name</UniqueId>
+      <Fields>
+        Ultrax_Name,max_formulas,max_injections,max_valves,preflush,postflush,opcserver,start_date,active,qty_multiplier,
+        use_ftp,ftp_ip,ftp_login,ftp_pw
+      </Fields>
+      <Query>
+        select Ultrax_Name,max_formulas,max_injections,max_valves,preflush,postflush,opcserver,start_date,active,qty_multiplier,
+        use_ftp,ftp_ip,ftp_login,ftp_pw  from ultrax
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.ControllerSetupdata</TableName>
+      <UniqueId>TopicName</UniqueId>
+      <Fields>
+        TopicName,MaxWashFormulas, MaxFormulaInjections,NoofChemicalValves,PreflushTimesec,PostflushTimesec,OPCServer,
+        InstallDate,Active,InjectionQuantityMultiplier,WebportFtpEnabled,WebportIP,WebportLogin,WebportPassword
+      </Fields>
+      <Query>
+
+        DECLARE @SetData VARCHAR(MAX),
+        @TopicName    VARCHAR(MAX),
+        @fieldName    VARCHAR(MAX),
+        @value    VARCHAR(MAX)
+        --------------------------------------------------------
+        DECLARE @TempTable TABLE(
+        TopicName    VARCHAR(MAX),
+        fieldName    VARCHAR(MAX),
+        value    VARCHAR(MAX))
+        --------------------------------------------------------
+        DECLARE @MyCursor CURSOR
+        SET @MyCursor = CURSOR FAST_FORWARD
+        FOR
+        select cc.TopicName,
+        ltrim(rtrim(replace(replace(replace(replace(replace(f.Label,' ',''),'(',''),')',''), '/',''),'.','')))
+        as fieldName,csd.value
+        from tcd.ConduitController cc
+        inner join tcd.ControllerSetupData csd on csd.ControllerId=cc.ControllerId
+        inner join tcd.Field f on csd.FieldId=f.Id
+        inner join tcd.FieldType ft on ft.Id=f.TypeId
+        OPEN @MyCursor
+        FETCH NEXT FROM @MyCursor
+        INTO @TopicName,@fieldName,@value
+        WHILE @@FETCH_STATUS = 0
+        BEGIN
+        if(@value = 'true')
+        set @value = 'True'
+        else if(@value = 'false')
+        set @value = 'False'
+        insert into @TempTable(TopicName,fieldName,value)
+        values(@TopicName,@fieldName,@value)
+        FETCH NEXT FROM @MyCursor
+        INTO @TopicName,@fieldName,@value
+
+        END
+        CLOSE @MyCursor
+        DEALLOCATE @MyCursor
+        select  TopicName,MaxWashFormulas, MaxFormulaInjections,NoofChemicalValves,
+        PreflushTimesec,PostflushTimesec,OPCServer,
+        InstallDate, Active,
+        InjectionQuantityMultiplier,WebportFtpEnabled,WebportIP,WebportLogin,WebportPassword
+        from
+        (
+        select * from @TempTable
+        ) d
+        pivot
+        (
+        max(Value)
+        for fieldName in (MaxWashFormulas, MaxFormulaInjections,NoofChemicalValves,PreflushTimesec,
+        PostflushTimesec,OPCServer,
+        InstallDate,Active,InjectionQuantityMultiplier,WebportFtpEnabled,WebportIP,WebportLogin,WebportPassword)
+        ) piv;
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

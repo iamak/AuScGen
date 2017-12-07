@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Shift Tab Page">
+    <Element name="tabShiftLabor" type="HtmlControl">
+      <id>tabShiftLabor</id>
+    </Element>
+    <Element name="addShift" type="HtmlButton">
+      <id>addShift</id>
+    </Element>
+    <Element name="shiftName" type="HtmlButton">
+      <id>shiftName</id>
+    </Element>
+    <Element name="targetProduction" type="HtmlButton">
+      <atribute>id=targetProduction;name=targetProduction</atribute>
+    </Element>
+     <Element name="targetProductionAddShiftUoM" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div[6]/div/span</xpath>
+    </Element>
+    <Element name="shiftFromTime" type="HtmlControl">
+      <id>timepickerShiftfromtime</id>
+    </Element>
+    <Element name="shiftToTime" type="HtmlControl">
+      <id>timepickerShifttotime</id>
+    </Element>
+    <Element name="addBreak" type="HtmlButton">
+      <id>addBreak</id>
+    </Element>
+    <Element name="btnSaveShift" type="HtmlButton">
+      <id>btnUpdate</id>
+    </Element>
+    <Element name="btnCancelShift" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="cbSunday" type="HtmlControl">
+      <id>cbSunday</id>
+    </Element>
+    <Element name="cbMonday" type="HtmlControl">
+      <id>cbMonday</id>
+    </Element>
+    <Element name="cbTueday" type="HtmlControl">
+      <id>cbTueday</id>
+    </Element>
+    <Element name="cbWedday" type="HtmlControl">
+      <id>cbWedday</id>
+    </Element>
+    <Element name="cbThuday" type="HtmlControl">
+      <id>cbThuday</id>
+    </Element>
+    <Element name="cbFriday" type="HtmlControl">
+      <id>cbFriday</id>
+    </Element>
+    <Element name="cbSatday" type="HtmlControl">
+      <id>cbSatday</id>
+    </Element>
+    <Element name="shiftAddMessage" type="HtmlControl">
+      <id>errorMsgDiv</id>
+    </Element>
+    <Element name="shiftOverlapMessage" type="HtmlControl">
+      <id>errorDivLabor</id>
+    </Element>
+    <Element name="errorMsgBreaks" type="HtmlControl">
+      <id>errorMsgBreaks</id>
+    </Element>
+    <Element name="ddlLaborType" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div/select[@id='ddlLaborType']</xpath>
+    </Element>
+    <Element name="ddlLaborLocation" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div/select[@id='ddlLaborLocation']</xpath>
+    </Element>    
+    <Element name="manHours" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div/input[@id='manHours']</xpath>
+    </Element>
+    <Element name="avgPricePerHr" type="HtmlControl">
+      <xpath>.//*[@id='details-container']/div/input[@id='avgPricePerHr']</xpath>
+    </Element>
+    <Element name="addLaourCancelButton" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="addLaourSaveButton" type="HtmlButton">
+      <id>btnLaborUpdate</id>
+    </Element>
+    <Element name="accordionControl" type="HtmlControl">
+      <id>accordion</id>
+    </Element>
+    <Element name="SelectPreferredLanguage" type="HtmlControl">
+      <id>ddlLanguages</id>
+    </Element>
+    <Element name="btnUpload" type="HtmlInputButton">
+      <atribute>id=btnSave</atribute>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

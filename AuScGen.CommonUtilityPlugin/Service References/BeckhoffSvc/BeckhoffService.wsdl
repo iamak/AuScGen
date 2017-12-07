@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BeckhoffService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://hyd-gudibandi.alliance-consulting.com:1275/BeckhoffService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://hyd-gudibandi.alliance-consulting.com:1275/BeckhoffService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://hyd-gudibandi.alliance-consulting.com:1275/BeckhoffService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BeckhoffTagReader" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBeckhoffService_ValidateTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateTags" />
+  </wsdl:message>
+  <wsdl:message name="IBeckhoffService_ValidateTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBeckhoffService_ReadAllPLCTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllPLCTags" />
+  </wsdl:message>
+  <wsdl:message name="IBeckhoffService_ReadAllPLCTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllPLCTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBeckhoffService_WriteTagsData_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteTagsData" />
+  </wsdl:message>
+  <wsdl:message name="IBeckhoffService_WriteTagsData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteTagsDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBeckhoffService">
+    <wsdl:operation name="ValidateTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBeckhoffService/ValidateTags" message="tns:IBeckhoffService_ValidateTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBeckhoffService/ValidateTagsResponse" message="tns:IBeckhoffService_ValidateTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllPLCTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBeckhoffService/ReadAllPLCTags" message="tns:IBeckhoffService_ReadAllPLCTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBeckhoffService/ReadAllPLCTagsResponse" message="tns:IBeckhoffService_ReadAllPLCTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteTagsData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBeckhoffService/WriteTagsData" message="tns:IBeckhoffService_WriteTagsData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBeckhoffService/WriteTagsDataResponse" message="tns:IBeckhoffService_WriteTagsData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBeckhoffService" type="tns:IBeckhoffService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidateTags">
+      <soap:operation soapAction="http://tempuri.org/IBeckhoffService/ValidateTags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllPLCTags">
+      <soap:operation soapAction="http://tempuri.org/IBeckhoffService/ReadAllPLCTags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteTagsData">
+      <soap:operation soapAction="http://tempuri.org/IBeckhoffService/WriteTagsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BeckhoffService">
+    <wsdl:port name="BasicHttpBinding_IBeckhoffService" binding="tns:BasicHttpBinding_IBeckhoffService">
+      <soap:address location="http://hyd-gudibandi.alliance-consulting.com:1275/BeckhoffService.svc/BeckhoffService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

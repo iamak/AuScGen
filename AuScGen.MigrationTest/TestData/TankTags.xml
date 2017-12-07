@@ -1,0 +1,34 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyTankTagsData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>Tanks</TableName>
+      <UniqueId>description</UniqueId>
+      <Fields>description,size_dde,deviation_dde,currentlevel_dde,ultrax_name </Fields>
+      <Query>select description,size_dde,deviation_dde,currentlevel_dde,ultrax_name from tanks</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>Tcd.ModuleTags</TableName>
+      <UniqueId>TankName</UniqueId>
+      <Fields>TankName,Tag_SIZ,Tag_DEV,Tag_LVL,topicname</Fields>
+      <Query>
+        select TankName,Tag_SIZ,Tag_DEV,Tag_LVL,topicname
+        from
+        (
+        select ts.TankName,cc.TopicName,MT.TagType,MT.TagAddress
+        from TCD.ModuleTags mt
+        inner join TCD.TagType tt on tt.TagType=mt.TagType
+        inner join TCD.Tanksetup ts on ts.tankId=mt.ModuleId
+        inner join tcd.ConduitController cc on cc.ControllerId=ts.ControllerId
+        where mt.ModuleTypeId = '1'
+        ) d
+        pivot
+        (
+        max(TagAddress)
+        for TagType in (Tag_SIZ,Tag_DEV,Tag_LVL)
+        ) piv;
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

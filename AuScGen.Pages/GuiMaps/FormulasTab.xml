@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Formulas Tab Page">
+    <Element name="tabFormulas" type="HtmlControl">
+      <id>tabFormula</id>
+    </Element>
+    <Element name="btnAddFormulas" type="HtmlControl">
+      <xpath>//a[contains(text(),'Add Formula')]</xpath>
+    </Element>
+    <Element name="txtFormulaName" type="HtmlControl">
+      <id>txtFormulaName</id>
+    </Element>
+    <Element name="txtcopyFormulaName" type="HtmlControl">
+      <id>txtcopyFormulaName</id>
+    </Element>
+    <Element name="ddlEcolabTextileCategoryAdd_listbox" type="HtmlControl">
+      <id>ddlEcolabTextileCategoryAdd_listbox</id>
+    </Element>
+    <Element name="ddlEcolabTextileCategoryEdit_listbox" type="HtmlControl">
+      <id>ddlEcolabTextileCategory_listbox</id>
+    </Element>
+    
+    <Element name="ddlEcolabSaturationAdd_listbox" type="HtmlControl">
+      <id>ddlEcolabSaturationAdd_listbox</id>
+    </Element>
+    <Element name="ddlEcolabSaturationEdit_listbox" type="HtmlControl">
+      <id>ddlEcolabSaturation_listbox</id>
+    </Element>
+    
+    <Element name="ddlChainFormulaAdd_listbox" type="HtmlControl">
+      <id>ddlChainFormulaAdd_listbox</id>
+    </Element>
+    <Element name="ddlChainFormulaEdit_listbox" type="HtmlControl">
+      <id>ddlChainFormula_listbox</id>
+    </Element>
+    
+    <Element name="ddlChainTextileCategoryAdd_listbox" type="HtmlControl">
+      <id>ddlChainTextileCategoryAdd_listbox</id>
+    </Element>
+    <Element name="ddlChainTextileCategoryEdit_listbox" type="HtmlControl">
+      <id>ddlChainTextileCategory_listbox</id>
+    </Element>
+    
+    <Element name="txtaddNumberofweightedPieces" type="HtmlControl">
+      <id>txtaddNumberofweightedPieces</id>
+    </Element>
+    <Element name="txtaddWeight" type="HtmlControl">
+      <id>txtaddWeight</id>
+    </Element>
+
+    <Element name="txtNumberofweightedPieces" type="HtmlControl">
+      <id>txtNumberofweightedPieces</id>
+    </Element>
+    <Element name="txtWeight" type="HtmlControl">
+      <id>txtWeight</id>
+    </Element>
+
+
+
+    <Element name="txtPieceWeight" type="HtmlControl">
+      <id>txtPieceWeight</id>
+    </Element>
+    <Element name="btnSave" type="HtmlControl">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="btnUpdatecopy" type="HtmlControl">
+      <id>btnUpdatecopy</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlControl">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>
+    <Element name="SuccessMsg" type="HtmlControl">
+      <id>errorDiv</id>
+    </Element>
+    <Element name="FormulasTableGrid" type="HtmlControl">
+      <xpath>.//*[@id='gridFormula']/div[3]/table</xpath>
+    </Element>
+    <Element name="FormulaNameInLine" type="HtmlControl">
+      <name>Name</name>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

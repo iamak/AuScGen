@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+<FeatureSet name="Customer Tab Controls">
+  <Element name="tabCustomer" type="HtmlControl">
+    <id>tabCustomer</id>
+  </Element>
+  <Element name="tabActiveTabItem" type="HtmlControl">
+    <class>tab active</class>
+  </Element>
+  <Element name="MainMenubreadcrumb" type="HtmlControl">
+    <id>topnav</id>
+  </Element>
+  <Element name="WETabGridTable" type="HtmlControl">
+    <xpath>.//*[@id='gridUtility']/div[3]/table</xpath>
+  </Element>
+  <Element name="MainMenubread" type="HtmlControl">
+    <id>breadCrumbContainer</id>
+  </Element>
+  <Element name="AddCustomerButton" type="HtmlControl">
+    <xpath>//span[contains(text(),'Add Customer')]</xpath>
+  </Element>
+  <Element name="CustomerGridHeader" type="HtmlControl">
+    <xpath>.//*[@id='gridCustomer']/div[2]/div/table/thead/tr</xpath>
+  </Element>
+  <Element name="CustomerTabGridTable" type="HtmlControl">
+    <xpath>.//*[@id='gridCustomer']/div[3]/table</xpath>
+  </Element>
+  <Element name="ContactKGridDiv" type="HtmlControl">
+    <class>k-grid-content</class>
+  </Element>
+  <Element name="ContactTabGridTable" type="HtmlControl">
+    <xpath>.//*[@id='gridContact']/div[3]/table</xpath>
+  </Element>
+  <Element name="ChemicalsTabGridTable" type="HtmlControl">
+    <xpath>.//*[@id='gridChemical']/div[2]/table</xpath>
+  </Element>
+  <Element name="FormulasTabGridTable" type="HtmlControl">
+    <xpath>.//*[@id='gridFormula']/div[3]/table</xpath>
+  </Element>
+  <Element name="MetersTabGridTable" type="HtmlControl">
+    <xpath>.//*[@id='gridMeter']/div[3]/table</xpath>
+  </Element>
+  <Element name="SensorsTabGridTable" type="HtmlControl">
+    <xpath>.//*[@id='gridSensor']/div[3]/table</xpath>
+  </Element>
+  <Element name="CustomerID" type="HtmlControl">
+    <name>CustomerId</name>
+  </Element>
+  <Element name="CustomerName" type="HtmlControl">
+    <name>CustomerName</name>
+  </Element>
+  <Element name="CustomerEditSaveButton" type="HtmlInputButton">
+    <xpath>//span[contains(text(),'Save')]</xpath>
+  </Element>
+  <Element name="CustomerSaveButton" type="HtmlInputButton">
+    <id>btnUpdate</id>
+  </Element>
+  <Element name="SuccessValidationMessage" type="HtmlControl">
+    <class>k-success-message</class>
+  </Element>
+  <Element name="CustomerTabGridTableRows" type="HtmlControl">
+    <xpath>.//*[@id='gridCustomer']/div[3]/table/tbody</xpath>
+  </Element>
+  <Element name="btnDelete" type="HtmlControl">
+    <class>k-icon k-delete k-state-border-down</class>
+  </Element>
+  <Element name="btnCancel" type="HtmlControl">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+  </Element>
+  <Element name="tabWEDevice" type="HtmlControl">
+    <id>tabDevice</id>
+  </Element>
+  <Element name="btnAddWEDetails" type="HtmlControl">
+    <xpath>.//*[@id='gridUtility']/div[1]/a/span</xpath>
+  </Element>
+  <Element name="SelectDeviceType" type="HtmlControl">
+    <id>ddlDeviceTypeAddNew</id>
+  </Element>
+  <Element name="SelectDeviceModel" type="HtmlControl">
+    <id>ddlDeviceModelAddNew</id>
+  </Element>
+  <Element name="InstallDate" type="HtmlControl">
+    <xpath>.//*[@id='installDate']</xpath>
+  </Element>
+  <Element name="txtCommentUpdate" type="HtmlControl">
+    <id>txtComment</id>
+  </Element>
+  <Element name="txtComment" type="HtmlControl">
+    <id>txtCommentAdd</id>
+  </Element>
+  <Element name="btnWEUpdate" type="HtmlControl">
+    <id>btnUpdate</id>
+  </Element>
+  <Element name="WEInvalidMsg" type="HtmlControl">
+    <class>k-widget k-tooltip k-tooltip-validation k-invalid-msg</class>
+  </Element>
+  <Element name="btnWECancel" type="HtmlControl">
+    <class>btn btn-default btn-sm pull-left</class>
+  </Element>
+  <Element name="WETabGridTableRows" type="HtmlControl">
+    <xpath>.//*[@id='gridUtility']/div[3]/table/tbody</xpath>
+  </Element>
+  <Element name="WEPosition" type="HtmlControl">
+    <class>k-input</class>
+  </Element>
+  <Element name="lblConduitPortlet" type="HtmlControl">
+    <xpath>//div[contains(text(),'Conduit Portlet1')]</xpath>
+  </Element>
+</FeatureSet>
+</ObjectRepository>

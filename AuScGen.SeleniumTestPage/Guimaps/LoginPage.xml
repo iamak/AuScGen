@@ -1,0 +1,25 @@
+<ObjectRepository>
+<FeatureSet name='LoginPage'>
+  
+  <Element type='link' name='loginPageLink'>
+    <xpath>//a[contains(text(),'Login')]</xpath>
+  </Element>
+
+  <Element type='Textbox' name='userName'>
+    <xpath>//input[@id='username']</xpath>
+  </Element>
+
+  <Element type='Textbox' name='password'>
+    <xpath>//input[@id='password']</xpath>
+  </Element>
+
+  <Element type='Button' name='logInButton'>
+    <xpath>//input[@id='Login']</xpath>
+  </Element>
+  
+  <Element type='Textbox' name='SearchBox'>
+		<xpath>//header[@id='oneHeader']/div[3]/div[2]/div/div</xpath>
+	</Element>
+  
+</FeatureSet>
+</ObjectRepository>

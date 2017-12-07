@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Chemical tab controls">
+    <Element name="ChemicalsGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridChemical']/div[3]/table</xpath>
+    </Element>
+    <Element name="PlantSetUp" type="HtmlControl">
+      <content>Plant Setup</content>
+    </Element>
+    <Element name="ControllerSetUp" type="HtmlControl">
+      <content>Controller Setup</content>
+    </Element>
+    <Element name="GeneralTabVerify" type="HtmlControl">
+      <class>tab active</class>
+    </Element>
+    <Element name="PlantSetupSubMenu" type="HtmlControl">
+      <a>//a[contains(text(),'PlantSetup')]</a>
+    </Element>
+    <Element name="SuccessValidationMessage" type="HtmlControl">
+      <class>k-success-message</class>
+    </Element>
+    <Element name="GeneralTab" type="HtmlControl">
+      <class>k-success-message</class>
+    </Element>
+    <Element name="ChemicalGridHeader" type="HtmlControl">
+      <xpath>.//*[@id='gridChemical']/div[2]/div/table/thead/tr</xpath>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="ChemicalTab Inline Edit Controls">
+    <Element name="chkboxIncludeCIinlineEdit" type="HtmlCheckbox">
+      <name>IncludeinCI</name>
+    </Element>
+    <Element name="txtCostInlineEdit" type="HtmlInputText">
+      <name>Cost</name>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="ChemicalTab Add Controls">
+    <Element name="txtNameSKUNumberAdd" type="HtmlInputText">
+      <id>txtNameAdd</id>
+    </Element>
+    <Element name="txtCostAdd" type="HtmlInputText">
+      <id>txtCostAdd</id>
+    </Element>
+    <Element name="chkIncludeinCIAdd" type="HtmlButton">
+      <id>cbIncludeinCIAdd</id>
+    </Element>
+    <Element name="btnUpdate" type="HtmlButton">
+      <id>btnUpdate</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="ChemicalTab Edit Update PopUp Controls">
+    <Element name="txtCostEdit" type="HtmlInputText">
+      <id>txtCost</id>
+    </Element>
+    <Element name="chkIncludeinCIEdit" type="HtmlButton">
+      <id>cbIncludeinCI</id>
+    </Element>
+    <Element name="btnEditSave" type="HtmlButton">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="btnEditCancel" type="HtmlButton">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>
+    <Element name="btnAddChemical" type="HtmlButton">
+      <xpath>//span[contains(text(),'Add Chemical')]</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

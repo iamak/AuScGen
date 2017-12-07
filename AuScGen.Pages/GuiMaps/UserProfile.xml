@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="User Profile">
+    <Element name="lnkMyProfile" type="HtmlControl">
+      <xpath>.//*[@id='lnkMyProfile']</xpath>
+    </Element>
+    <Element name="btnSave" type="HtmlButton">
+      <id>btnSave</id>
+    </Element>
+	<Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+	<Element name="ddlTitle" type="HtmlSelect">
+      <id>ddlTitle</id>
+    </Element>
+	<Element name="ddlLanguages" type="HtmlSelect">
+      <id>ddlLanguages</id>
+    </Element>
+	<Element name="lnkChangePwd" type="HtmlControl">
+      <xpath>.//*[@id='lnkChangePwd']/span</xpath>
+    </Element>
+	<Element name="lblUserProfile" type="HtmlControl">
+      <xpath>.//*[@id='lblUserProfile']</xpath>
+    </Element>
+	<Element name="txtFirstName" type="HtmlInputText">
+      <id>txtFirstName</id>
+   </Element>
+	<Element name="txtLastName" type="HtmlInputText">
+      <id>txtLastName</id>
+    </Element>
+	<Element name="txtEmail" type="HtmlInputText">
+      <id>txtEmail</id>
+    </Element>
+	<Element name="txtOfficePhone" type="HtmlInputText">
+      <id>txtOfficePhone</id>
+    </Element>
+	<Element name="txMobilePhone" type="HtmlInputText">
+      <id>txMobilePhone</id>
+    </Element>
+	<Element name="txtFaxNo" type="HtmlInputText">
+      <id>txtFaxNo</id>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="User Profile Confirmation Controls">
+	  <Element name="ConfirmDialog" type="HtmlControl">
+      <xpath>.//*[@id='ConfirmDialog']/div/div/div/div[2]/span</xpath>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="Change Password Controls">
+    <Element name="txtOldPassword" type="HtmlInputPassword">
+      <xpath>.//*[@id='details-container']/div[2]/input</xpath>
+    </Element>
+	<Element name="txtNewPassword" type="HtmlInputPassword">
+      <id>txtNewPassword</id>
+    </Element>
+	<Element name="txtConfirmPassword" type="HtmlInputPassword">
+      <id>txtConfirmPassword</id>
+    </Element>
+	<Element name="btnSavePassword" type="HtmlButton">
+      <xpath>.//*[@id='btnSaveUser']</xpath>
+    </Element>
+	<Element name="btnCancelPassword" type="HtmlButton">
+      <xpath>.//*[@id='btnCancel']</xpath>
+    </Element>
+  <Element name="successMsg" type="HtmlControl">
+      <id>successMsg</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

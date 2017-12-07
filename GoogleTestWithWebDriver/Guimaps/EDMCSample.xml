@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Google Page">
+    <Element name="menu" type="HtmlControl">
+      <xpath>.//*[@id='SiteNav']</xpath>
+    </Element>
+    <Element name="aboutEDMC" type="HtmlControl">
+      <xpath>.//*[@id='SectionNavList']</xpath>
+    </Element>
+    <Element name="options" type="HtmlControl">
+      <xpath>.//*[@id='ctl00_contentSectionNav_SectionNav_hlNavAboutSchools_sub']</xpath>
+    </Element>
+    <Element name="image" type="HtmlControl">
+      <xpath>.//*[@id='PageContent']/img</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

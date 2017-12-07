@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ecolab.FunctionalTest.Config" GeneratedClassName="TestSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Url" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://hyd-ecolabweb5:9999</Value>
+    </Setting>
+    <Setting Name="DBConnection" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=HYD-ECOLABDB\SQLExpress;Initial Catalog=ConduitLocalQA;User ID=tcddev;Password=Agstcd@1</Value>
+    </Setting>
+    <Setting Name="GetByFilterAPI" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://hyd-ecolabweb5:5555/Api/TrendingChart/GetByFilters?</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

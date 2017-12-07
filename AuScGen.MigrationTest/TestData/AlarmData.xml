@@ -1,0 +1,23 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyAlarmData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>Errors</TableName>
+      <UniqueId>code</UniqueId>
+      <Fields>ultrax_name,date,code,washer,lfs_washer,formula,injection,valve,user</Fields>
+      <Query>
+        SELECT ultrax_name, date, code, washer, lfs_washer, formula, injection, valve, user from errors
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.AlarmData</TableName>
+      <UniqueId>AlarmCode</UniqueId>
+      <Fields>ToipcName,StartDate,AlarmCode,MachineNumber,ProbeNumber,ProgramId,StepId,Valve,User</Fields>
+      <Query>
+        SELECT cc.TopicName,A.StartDate,a.AlarmCode,a.MachineNumber,a.ProbeNumber,a.ProgramId,a.StepId,a.Valve,a.UserId
+        from [TCD].[AlarmData] A inner join tcd.ConduitController cc on cc.ControllerId=a.ControllerId
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

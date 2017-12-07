@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Storage Tanks Tab Page">
+    <Element name="tabStorageTanks" type="HtmlControl">
+      <id>tabTanksList</id>    
+    </Element>
+    <Element name="btnAddStorageTanks" type="HtmlControl">
+      <id>btnAddStorageTanks</id>
+    </Element>
+    <Element name="btnBackToStorageTanks" type="HtmlControl">
+      <xpath>//span[contains(text(),'Back to Storage Tanks')]</xpath>
+    </Element>
+    <Element name="txtTankName" type="HtmlControl">
+      <id>txtTankName</id>
+    </Element>
+    <Element name="ddlProductName" type="HtmlControl">
+      <id>ddlProductName</id>
+    </Element>
+    <Element name="txtLowLevel" type="HtmlControl">
+      <id>txtLowLevel</id>
+    </Element>
+    <Element name="txtSize" type="HtmlControl">
+      <id>txtSize</id>
+    </Element>
+    <Element name="ddlControllerName" type="HtmlControl">
+      <id>ddlControllerName</id>
+    </Element>
+    <Element name="txtEmptyLevel" type="HtmlControl">
+      <id>txtEmptyLevel</id>
+    </Element>
+    <Element name="txtLevelDeviation" type="HtmlControl">
+      <id>txtLevelDeviation</id>
+    </Element>
+    <Element name="txtCallibrationLevel" type="HtmlControl">
+      <id>txtCallibrationLevel</id>
+    </Element>
+    <Element name="ddlInputType" type="HtmlControl">
+      <id>ddlInputType</id>
+    </Element> 
+    <Element name="btnSave" type="HtmlControl">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="btnCancel" type="HtmlControl">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="errordiv" type="HtmlControl">
+      <id>errordiv</id>
+    </Element>
+    <Element name="StorageTankTableGrid" type="HtmlControl">
+      <xpath>.//*[@id='tblStorageTanks']</xpath>
+    </Element>
+    <Element name="dialogMsg" type="HtmlControl">
+      <xpath>//span[contains(text(),'Are you sure you want to delete this Storage Tanks?')]</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

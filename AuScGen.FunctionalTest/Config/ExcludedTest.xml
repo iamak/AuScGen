@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestCases>  
+  <Test>
+    <TestName>TC01_VerySetupMenuItem_Sample</TestName>
+    <Description></Description>
+  </Test>
+  <Test>
+    <TestName>ManualInputRewashTests_Sample</TestName>
+    <Description></Description>
+  </Test>
+  <Test>
+    <TestName>TC03_VerifyControllerToPlantSetupNavigation_Sample</TestName>
+    <TestSuit>Custom Suit</TestSuit>
+    <Description></Description>
+  </Test>
+</TestCases>

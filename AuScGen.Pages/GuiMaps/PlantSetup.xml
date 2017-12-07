@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Plant Setup Page">
+    <Element name="tabGeneral" type="HtmlControl">
+      <id>tabGeneral</id>
+    </Element>
+    <Element name="tabContacts" type="HtmlControl">
+      <id>tabContacts</id>
+    </Element>
+    <Element name="tabCustomer" type="HtmlControl">
+      <id>tabCustomer</id>
+    </Element>
+    <Element name="tabChemicals" type="HtmlControl">
+      <id>tabChemicals</id>
+    </Element>
+    <Element name="tabMeter" type="HtmlControl">
+      <id>tabMeter</id>
+    </Element>
+    <Element name="tabUtility" type="HtmlControl">
+      <id>tabUtilities</id>
+    </Element>
+    <Element name="tabCleanSide" type="HtmlControl">
+      <id>tabCleanSide</id>
+    </Element>
+    <Element name="tabRedFlag" type="HtmlControl">
+      <id>tabRedFlag</id>
+    </Element>
+    <Element name="tabActiveTabItem" type="HtmlControl">
+      <class>tab active</class>
+    </Element>
+    <Element name="MainMenubreadcrumb" type="HtmlControl">
+      <id>topnav</id>
+    </Element>
+    <Element name="WETabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridUtility']/div[3]/table</xpath>
+    </Element>
+    <Element name="MainMenubread" type="HtmlControl">
+      <id>breadCrumbContainer</id>
+    </Element>
+    <Element name="AddCustomerButton" type="HtmlControl">
+      <class>btn btn-sm btn-primary grid-add-new-record k-grid-AddCustomer</class>
+    </Element>
+    <Element name="CustomerGridHeader" type="HtmlControl">
+      <xpath>.//*[@id='gridCustomer']/div[2]/div/table/thead/tr</xpath>
+    </Element>
+    <Element name="CustomerTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridCustomer']/div[3]/table</xpath>
+    </Element>
+    <Element name="ContactKGridDiv" type="HtmlControl">
+      <class>k-grid-content</class>
+    </Element>
+    <Element name="ContactTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridContact']/div[3]/table</xpath>
+    </Element>
+    <Element name="ChemicalsTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridChemical']/div[2]/table</xpath>
+    </Element>
+    <Element name="FormulasTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridFormula']/div[3]/table</xpath>
+    </Element>
+    <Element name="MetersTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridMeter']/div[3]/table</xpath>
+    </Element>
+    <Element name="SensorsTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridSensor']/div[3]/table</xpath>
+    </Element>
+    <Element name="CustomerID" type="HtmlControl">
+      <name>CustomerId</name>
+    </Element>
+    <Element name="CustomerName" type="HtmlControl">
+      <name>CustomerName</name>
+    </Element>
+    <Element name="CustomerSaveButton" type="HtmlInputButton">
+      <id>btnUpdate</id>
+    </Element>
+    <Element name="SuccessValidationMessage" type="HtmlControl">
+      <class>k-success-message</class>
+    </Element>
+    <Element name="CustomerTabGridTableRows" type="HtmlControl">
+      <xpath>.//*[@id='gridCustomer']/div[3]/table/tbody</xpath>
+    </Element>
+    <Element name="btnDelete" type="HtmlControl">
+      <class>k-icon k-delete k-state-border-down</class>
+    </Element>
+    <Element name="btnCancel" type="HtmlControl">
+      <class>btn btn-default pull-left btn-sm cancelRowPopup</class>
+    </Element>
+    <Element name="tabWEDevice" type="HtmlControl">
+      <id>tabDevice</id>
+    </Element>
+    <Element name="btnAddWEDetails" type="HtmlControl">
+      <xpath>.//*[@id='gridUtility']/div[1]/a/span</xpath>
+    </Element>
+    <Element name="SelectDeviceType" type="HtmlControl">
+      <id>ddlDeviceTypeAddNew</id>
+    </Element>
+    <Element name="SelectDeviceModel" type="HtmlControl">
+      <id>ddlDeviceModelAddNew</id>
+    </Element>
+    <Element name="InstallDate" type="HtmlControl">
+      <xpath>.//*[@id='installDate']</xpath>
+    </Element>
+    <Element name="txtCommentUpdate" type="HtmlControl">
+      <id>txtComment</id>
+    </Element>
+    <Element name="txtComment" type="HtmlControl">
+      <id>txtCommentAdd</id>
+    </Element>
+    <Element name="btnWEUpdate" type="HtmlControl">
+      <id>btnUpdate</id>
+    </Element>
+    <Element name="WEInvalidMsg" type="HtmlControl">
+      <class>k-widget k-tooltip k-tooltip-validation k-invalid-msg</class>
+    </Element>
+    <Element name="btnWECancel" type="HtmlControl">
+      <class>btn btn-default btn-sm pull-left</class>
+    </Element>
+    <Element name="WETabGridTableRows" type="HtmlControl">
+      <xpath>.//*[@id='gridUtility']/div[3]/table/tbody</xpath>
+    </Element>
+    <Element name="WEPosition" type="HtmlControl">
+      <class>k-input</class>
+    </Element>
+  </FeatureSet>  
+  <FeatureSet name="General Tab Controls">
+    <Element name="SelectPreferredLanguage" type="HtmlControl">
+      <id>ddlLanguages</id>
+    </Element>
+    <Element name="SelectDBLiveTimeYears" type="HtmlControl">
+      <id>txtDataLiveTime</id>
+    </Element>
+    <Element name="SelectPreferredCurrency" type="HtmlControl">
+      <id>ddlCurrencyCodes</id>
+    </Element>
+    <Element name="SelectBudgetCustomerFlatFee" type="HtmlControl">
+      <id>ddlBudgetCustomer</id>
+    </Element>
+		<Element name="txtDatabaseExportPath" type="HtmlInputText">
+      <id>txtexportpath</id>
+    </Element>
+      <Element name="SelectUOM" type="HtmlControl">
+        <id>ddlUoms</id>
+      </Element>
+      <Element name="btnSaveUserPreferences" type="HtmlInputButton">
+        <id>btnSave</id>
+      </Element>
+    <Element name="imgUpload" type="HtmlInputFile">
+      <name>uploadimage</name>
+    </Element>
+    <Element name="btnUpload" type="HtmlInputButton">
+			<atribute>id=btnSave</atribute>
+		</Element>
+		<Element name="lblSuccess" type="HtmlDiv">
+			<xpath>//span[contains(text(),'Saved successfull')]</xpath>
+		</Element>
+		<Element name="btnCancel" type="HtmlInputButton">
+			<id>btnCancel</id>
+		</Element>
+		<Element name="lblHomepage" type="HtmllDiv">
+			<xpath>//div[contains(text(),'Conduit Portlet')]</xpath>
+		</Element>
+		<Element name="lnkSetup" type="HtmlAnchor">
+			<id>tabPlantSetup</id>
+    </Element>
+  </FeatureSet>
+  <FeatureSet  name="General MyService Defaults">
+    <Element name="TabHeading" type="HtmlControl">
+      <class>tab-heading</class>
+    </Element>
+    <Element name="MyServiceDetails" type="HtmlControl">
+      <xpath>.//*[@id='frmPlantSetupDetails']/div/div[1]/div</xpath>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="Meters Tab Controls">
+    <Element name="btnAddMeter" type="HtmlControl">
+      <content>Add Meter</content>
+    </Element>
+    <Element name="txtMeterName" type="HtmlControl">
+      <id>txtDescription</id>
+    </Element>
+    <Element name="ddlUtilityType" type="HtmlControl">
+      <id>ddlUtilityTypeAdd</id>
+    </Element>
+    <Element name="ddlUtilityLocation" type="HtmlControl">
+      <id>ddlUtilityLocationAdd</id>
+    </Element>
+    <Element name="ddlMachineCompartment" type="HtmlControl">
+      <id>ddlMachineCompartmentAdd</id>
+    </Element>
+    <Element name="ddlParent" type="HtmlControl">
+      <id>ddlParentAdd</id>
+    </Element>
+    <Element name="txtCalibration" type="HtmlControl">
+      <id>txtCalibrationAdd</id>
+    </Element>
+    <Element name="ddlUOM" type="HtmlControl">
+      <id>ddlUOMAdd</id>
+    </Element>
+    <Element name="ddlController" type="HtmlControl">
+      <id>ddlControllerAdd</id>
+    </Element>
+    <Element name="ddlAllowManualEntry" type="HtmlControl">
+      <id>ddlAllowManualEntryAdd</id>
+    </Element>
+    <Element name="txtMaxValueLimit" type="HtmlControl">
+      <id>txtMaxValueLimitAdd</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlControl">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="btnUpdate" type="HtmlControl">
+      <content>Save</content>
+    </Element>
+    <Element name="lblMeterAddedSuccess" type="HtmlControl">
+      <content>Meter Added Successfully</content>
+    </Element>
+    <Element name="lblErrorMessage" type="HtmlControl">
+      <id>errorMessageAdd</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

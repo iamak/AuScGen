@@ -1,0 +1,32 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyDryersData" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>Dryers</TableName>
+      <UniqueId>DryerNo</UniqueId>
+      <Fields>
+        DryerNo,Description,Manufacturer,Model,Capacity,BTU_Hour,
+        Gas_Module,Burner_Module,Gas_Meter,Burner_Meter,
+        Consumption_Meter,Cust_ID,Emp_Id,Soil_Id
+      </Fields>
+      <Query>
+        SELECT  dryerno, description, manufacturer, model, capacity, btu_hour, gas_module, burner_module, gas_meter, burner_meter, consumption_meter, cust_id, emp_id,
+        soil_id
+        FROM            Dryers
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>Dryers</TableName>
+      <UniqueId>DryerNo</UniqueId>
+      <Fields>
+        DryerNo,Description,Manufacturer,Model,Capacity,BTU_Hour,GasModule,
+        Burner_Mod,Gas_Meter,Burner_Met,Consumption,CustomerId,EmpId,SoilId
+      </Fields>
+      <Query>
+        select d.DryerNo,d.Description,d.Manufacturer,d.Model,d.Capacity,d.BTU_Hour,d.GasModule,d.Burner_Mod,d.Gas_Meter,d.Burner_Met,d.Consumption,d.CustomerId,d.SoilId,d.EmpId from tcd.Dryers d
+        inner join tcd.DryerType dt on dt.DryerTypeId=d.DryerTypeId
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

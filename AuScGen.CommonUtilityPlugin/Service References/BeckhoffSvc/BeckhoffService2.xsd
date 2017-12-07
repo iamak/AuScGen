@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://hyd-gudibandi.alliance-consulting.com:1275/BeckhoffService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BeckhoffTagReader" />
+  <xs:element name="ValidateTags">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BeckhoffTagReader" minOccurs="0" name="readTags" nillable="true" type="q1:ArrayOfBeckhoffTag" />
+        <xs:element minOccurs="0" name="ipAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="port" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateTagsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BeckhoffTagReader" minOccurs="0" name="ValidateTagsResult" nillable="true" type="q2:ArrayOfBeckhoffTag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllPLCTags">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BeckhoffTagReader" minOccurs="0" name="TagNames" nillable="true" type="q3:ArrayOfBeckhoffTag" />
+        <xs:element minOccurs="0" name="ipAddr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="port" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllPLCTagsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BeckhoffTagReader" minOccurs="0" name="ReadAllPLCTagsResult" nillable="true" type="q4:ArrayOfBeckhoffTag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WriteTagsData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="beckhoffIPAddr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="beckhoffPort" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BeckhoffTagReader" minOccurs="0" name="tagsToWrite" nillable="true" type="q5:ArrayOfBeckhoffTag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WriteTagsDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BeckhoffTagReader" minOccurs="0" name="WriteTagsDataResult" nillable="true" type="q6:ArrayOfBeckhoffTag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

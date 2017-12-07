@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestSettings>
+  <TestSetting>
+    <ConduitDBConnection>Data Source=HYD-ECOLABDB\SQLExpress;Initial Catalog=ConduitMigration;User ID=tcddev;Password=Agstcd@1</ConduitDBConnection>
+  </TestSetting>
+  <TestSetting>
+    <ChemWatchDBConnection>
+      Provider=VFPOLEDB.1;Data Source=D:\Chino;
+    </ChemWatchDBConnection>
+  </TestSetting>
+</TestSettings>

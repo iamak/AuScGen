@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Common Controls">
+    <Element name="btnTrayButton" type="HtmlButton">
+      <xpath>html/body/div[1]/div[1]/button</xpath>
+    </Element>
+    <Element name="TrayOptions" type="HtmlButton">
+      <xpath>html/body/div[1]/div[1]/ul/div[1]/div/li</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>
+

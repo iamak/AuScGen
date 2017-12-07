@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Red Flag tab controls">
+    <Element name="RedFlagGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridRedFlag']/div[3]/table</xpath>
+    </Element>
+    <Element name="SuccessValidationMessage" type="HtmlControl">
+      <class>k-success-message</class>
+    </Element>
+      <Element name="UserRolesRedFlagTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridRedFlag']/div[2]/table</xpath>
+    </Element>
+    <Element name="SelectPreferredLanguage" type="HtmlControl">
+      <id>ddlLanguages</id>
+    </Element>
+    <Element name="btnUpload" type="HtmlInputButton">
+      <atribute>id=btnSave</atribute>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="RedFlag Inline Edit Controls">
+    <Element name="txtMinRangeInlineEdit" type="HtmlInputText">
+      <name>MinimumRange</name>
+    </Element>
+    <Element name="txtMaxRangeInlineEdit" type="HtmlInputText">
+      <name>MaximumRange</name>
+    </Element>
+   <Element name="EditUserRoleLabel" type="HtmlLabel">
+      <xpath>//span[contains(text(),'Edit Red Flag')]</xpath>
+    </Element>
+    <Element name="ViewUserRoleLabel" type="HtmlLabel">
+      <xpath>//span[contains(text(),'View Red Flag')]</xpath>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="RedFlag tab Add Controls">
+    <Element name="VerifyMessages" type="HtmlControl">
+      <id>tabRedFlagContainer</id>
+    </Element>
+    <Element name="btnAddRedFlag" type="HtmlButton">
+      <xpath>//a[contains(text(),'Add Red Flag')]</xpath>
+    </Element>
+     <Element name="VerifyDuplication" type="HtmlButton">
+      <xpath>//span[contains(text(),'Duplicate Red Flag found')]</xpath>
+    </Element>
+     <Element name="RedFlagGridHeader" type="HtmlControl">
+      <xpath>.//*[@id='gridRedFlag']/div[2]/div/table/thead/tr</xpath>
+    </Element>
+    <Element name="ddlRedFlagItem" type="HtmlSelect">
+      <id>ddlItemAdd</id>
+    </Element>
+    <Element name="ddlLocationAdd" type="HtmlSelect">
+      <id>ddlLocationAdd</id>
+    </Element>
+    <Element name="txtMinimumRangeAdd" type="HtmlInputText">
+      <id>txtMinimumRangeAdd</id>
+    </Element>
+    <Element name="minRangeUOMAdd" type="HtmlInputText">
+      <xpath>.//*[@id='details-container']/div[7]/div/span</xpath>
+    </Element>
+    <Element name="txtMaximumRangeAdd" type="HtmlInputText">
+      <id>txtMaximumRangeAdd</id>
+    </Element>
+    <Element name="maxRangeUOMAdd" type="HtmlInputText">
+      <xpath>.//*[@id='details-container']/div[9]/div/span</xpath>
+    </Element>
+       <Element name="btnCancelAdd" type="HtmlSpan">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>
+     <Element name="VerifySaveAddButtonStatus" type="HtmlButton">
+       <id>btnUpdate</id>
+    </Element>
+    <Element name="ErrorMsg" type="HtmlDiv">
+      <id>errorDiv</id>
+    </Element>
+    <Element name="btnSaveAdd" type="HtmlSpan">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="btnMachine" type="HtmlButton">
+      <xpath>//button[contains(text(),'-- Select --')]</xpath>
+    </Element>
+    <Element name="chkboxMultiSelectMenu" type="HtmlButton">
+      <class>multiselect-container dropdown-menu</class>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="RedFlag Edit Update PopUp Controls">
+     <Element name="verifyMinUOM" type="HtmlSpan">
+      <xpath>//span[contains(text(),'Minimum Range must be less than Maximum Range')]</xpath>
+    </Element>
+    <Element name="verifyMaxUOM" type="HtmlSpan">
+      <xpath>//span[contains(text(),'Maximum Range must be greater than Minimum Range')]</xpath>
+    </Element>
+     <Element name="ddlRedFlagItemEdit" type="HtmlSelect">
+      <id>ddlItem</id>
+    </Element>
+    <Element name="ddlLocationEdit" type="HtmlSelect">
+      <id>ddlLocation</id>
+    </Element>
+    <Element name="txtMinimumRangeEdit" type="HtmlInputText">
+      <id>txtMinimumRange</id>
+    </Element>
+    <Element name="minRangeUOMEdit" type="HtmlInputText">
+      <xpath>.//*[@id='details']/div[3]/div/span</xpath>
+    </Element>
+    <Element name="txtMaximumRangeEdit" type="HtmlInputText">
+      <id>txtMaximumRange</id>
+    </Element>
+    <Element name="maxRangeUOMEdit" type="HtmlInputText">
+      <xpath>.//*[@id='details']/div[5]/div/span</xpath>
+    </Element>
+    <Element name="btnMachineMultiSelectEdit" type="HtmlButton">
+      <xpath>//button[contains(text(),'-- Select --')]</xpath>
+    </Element>
+    <Element name="btnCancelEdit" type="HtmlButton">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>
+    <Element name="btnSaveEdit" type="HtmlButton">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

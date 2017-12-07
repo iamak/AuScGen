@@ -1,0 +1,84 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyGroupFormulasConventional" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>opforms</TableName>
+      <UniqueId>Formula</UniqueId>
+      <Fields>
+        OP_CLASS,FORMULA,DESCRIPTION,CATEGORY,
+        DRAINS,DRAIN_TIME,WT_TARGET,RT_TARGET,
+        CLEAN_WT,CLEAN_AW,CUST_ID,REWASH
+      </Fields>
+      <Query>
+        Select OP_CLASS,FORMULA,DESCRIPTION,CATEGORY,DRAINS,DRAIN_TIME,WT_TARGET,
+        RT_TARGET,CLEAN_WT,CLEAN_AW,CUST_ID,REWASH From opforms where 
+        op_class in (select op_class from opclas where tunnel_class=0) order by op_class
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>WasherProgramSetup</TableName>
+      <UniqueId>ProgramNumber</UniqueId>
+      <Fields>washerGroupNumber,ProgramNumber,Name,Category,NumberOfDrains,DrainTime,NominalLoad,TotalRunTime,CleanWT,
+      CleanAW,CustomerId,Rewash</Fields>
+      <Query>
+        Select wg.washerGroupNumber,WPS.ProgramNumber,
+        pm.Name,WPS.Category,
+        WPS.NumberOfDrains,CONVERT(DECIMAL(16,2), WPS.DrainTime/60.0) as DrainTime,
+        WPS.NominalLoad,CONVERT(DECIMAL(16,2), WPS.TotalRunTime/60.0) as TotalRunTime,
+        CONVERT(DECIMAL(16,2), WPS.ExtraTime/60.0)as ExtraTime,WPS.CleanWT,WPS.CleanAW,WPS.CustomerId,
+        case WPS.Rewash
+        when '0' then 'False'
+        else 'True'
+        end as Rewash
+        from TCD.WasherProgramSetup WPS
+        Inner Join TCD.WasherGroup WG on WG.WasherGroupId=WPS.WasherGroupId
+        Inner Join TCD.WasherGroupType WGT on WGT.WasherGroupTypeId=WG.WasherGroupTypeId
+        inner join TCD.ProgramMaster pm on pm.ProgramId=wps.ProgramId order by
+        wg.WasherGroupNumber asc,wps.ProgramNumber asc
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC02_GroupFormulasTunnel" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>opforms</TableName>
+      <UniqueId>Op_class</UniqueId>
+      <Fields>
+        OP_CLASS,FORMULA,DESCRIPTION,CATEGORY,
+        DRAINS,DRAIN_TIME,WT_TARGET,RT_TARGET,RUNTIME_GT,
+        CLEAN_WT,CLEAN_AW,CUST_ID,REWASH
+      </Fields>
+      <Query>
+        Select OP_CLASS,FORMULA,DESCRIPTION,CATEGORY,DRAINS,DRAIN_TIME*(60) as 'Drain_Time',WT_TARGET,
+        RT_TARGET*(60) as 'RT_TARGET',RUNTIME_GT*(60) as 'RUNTIME_GT',CLEAN_WT,CLEAN_AW,CUST_ID,REWASH From opforms where op_class in (select op_class from opclas where tunnel_class=1) order by op_class
+      </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TunnelProgramSetup</TableName>
+      <UniqueId>WasherGroupNumber</UniqueId>
+      <Fields>
+        washerGroupNumber,ProgramNumber,Name,Category,NumberOfDrains,DrainTime,NominalLoad,TotalRunTime,
+        ExtraTime,CleanWT,CleanAW,CustomerId,Rewash
+      </Fields>
+      <Query>
+        Select wg.washerGroupNumber,TPS.ProgramNumber,
+        pm.Name,TPS.Category,
+        TPS.NumberOfDrains,CONVERT(DECIMAL(16,2), TPS.DrainTime/1.0) as DrainTime,
+        TPS.NominalLoad,CONVERT(DECIMAL(16,2), TPS.TotalRunTime/1.0) as TotalRunTime,
+        CONVERT(DECIMAL(16,2), TPS.ExtraTime/1.0)as ExtraTime,TPS.CleanWT,
+        TPS.CleanAW,TPS.CustomerId,
+        case TPS.Rewash
+        when '0' then 'False'
+        else 'True'
+        end as Rewash
+        from TCD.TunnelProgramSetup TPS
+        Inner Join TCD.WasherGroup WG on WG.WasherGroupId=TPS.WasherGroupId
+        Inner Join TCD.WasherGroupType WGT on WGT.WasherGroupTypeId=WG.WasherGroupTypeId
+        inner join TCD.ProgramMaster pm on pm.ProgramId=TPS.ProgramId order by wg.WasherGroupNumber asc,TPS.ProgramNumber asc
+
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

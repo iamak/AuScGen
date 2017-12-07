@@ -1,0 +1,33 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyMeterTagsData" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>meters</TableName>
+      <UniqueId>description</UniqueId>
+      <Fields>description,plcaddress</Fields>
+      <Query>select  meters.Description,traxmods.plcaddress from  meters,traxmods where meters.traxmodule=traxmods.module and traxmods.Active='True'
+</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tcd.moduletags</TableName>
+      <UniqueId>description</UniqueId>
+      <Fields>description,Tag_MPLC</Fields>
+      <Query> select description,Tag_MPLC
+from
+(
+ select mm.Description,mt.TagType,MT.TagAddress,MT.ModuleTypeId,M.ModuleDescription,
+ mt.ModuleID from TCD.ModuleTags mt
+  inner join TCD.TagType tt on tt.TagType=mt.TagType
+  inner join TCD.ModuleType m on m.ModuleTypeID=MT.ModuleTypeID
+  inner join TCD.Meter mm on mm.meterId=mt.ModuleId where m.ModuleTypeId=2
+) d
+pivot
+(
+max(TagAddress)
+for tagtype in (Tag_MPLC)
+) piv;
+</Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

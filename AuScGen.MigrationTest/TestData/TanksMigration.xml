@@ -1,0 +1,19 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyTanksDatal" Description="Migration DataBase">
+    <Source>
+      <DBName>chino</DBName>
+      <TableName>tanks</TableName>
+      <UniqueId>TankNO</UniqueId>
+      <Fields>TankNo,Description,Active,SKU,Lowlevel,PurchaseLevel,Size,Deviation,CurrentLevel,Size_dde,Deviation_dde,Currentlevel_dde,Ultrax_name</Fields>
+      <Query>SELECT TankNo,Description,Active,SKU,Lowlevel,PurchaseLevel,Size,Deviation,CurrentLevel,Ultrax_name from tanks</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>tanksetup</TableName>
+      <UniqueId>TankNO</UniqueId>
+      <Fields>TankId,TankName,Active,SKU,LowAlarmLevel,PurchaseLevel,Size,LevelDeviation,CurrentLevel,SizeAddress,DeviationAddress,
+LevelAddress,ControllerId</Fields>
+      <Query>select t.TankId,t.TankName,t.Active,t.SKU,t.LowAlarmLevel,t.PurchaseLevel,t.Size,t.LevelDeviation,t.CurrentLevel,cc.topicname from TCD.TankSetup t inner join tcd.ConduitController cc on t.controllerId=controllerID inner join tcd.ProduceDataMapping p on p.sku=t.sku</Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

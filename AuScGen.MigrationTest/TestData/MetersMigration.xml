@@ -1,0 +1,113 @@
+<MigrationTest>
+  <MigrationTestStep TestName="TC01_VerifyMetersData" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>Meters</TableName>
+      <UniqueId>Description</UniqueId>
+      <Fields>Description,MeterType,MeterMask,Uofm</Fields>
+      <Query>select Description,MeterType,MeterMask,Uofm,UsageFactor from meters where metertype like  '%Gas' </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.Meter</TableName>
+      <UniqueId>description</UniqueId>
+      <Fields>
+        description,Name,MaxValueLimit,MeterTickUnit,usagefactor
+      </Fields>
+      <Query>
+        DECLARE @SetUnitValue VARCHAR(MAX),
+        @description    VARCHAR(MAX),
+        @Name    VARCHAR(MAX),
+        @MaxValueLimit    VARCHAR(MAX),
+        @MeterTickUnit    VARCHAR(MAX),
+        @calibration    VARCHAR(MAX),
+        @UsageFactor    VARCHAR(MAX)
+
+        DECLARE @TempTable TABLE(
+        description   VARCHAR(MAX),
+        Name    VARCHAR(MAX),
+        MaxValueLimit    VARCHAR(MAX),
+        MeterTickUnit    VARCHAR(MAX),
+        Calibration varchar(max),
+        UsageFactor    VARCHAR(MAX))
+
+        DECLARE @MyCursor CURSOR
+        SET @MyCursor = CURSOR FAST_FORWARD
+        FOR
+
+        SELECT m.description,um.Name,m.MaxValueLimit,m.MeterTickUnit,
+        CONVERT(DECIMAL(16,0), m.calibration/1.0) as calibration,
+        CONVERT(DECIMAL(16,5), m.UsageFactor/1.0) as UsageFactor
+        FROM TCD.METER M left JOIN TCD.UtilityMaster UM ON UM.ResourceId=M.UtilityType
+        where m.UtilityType=1 order by m.MeterId asc
+
+        OPEN @MyCursor
+        FETCH NEXT FROM @MyCursor
+        INTO @description,@Name,@MaxValueLimit,@MeterTickUnit,@calibration,@UsageFactor
+        WHILE @@FETCH_STATUS = 0
+        BEGIN
+        if(@MeterTickUnit = 'cubic_foot')
+        Begin
+        if(@calibration = '0')
+        Begin
+        set @SetUnitValue =  'CuFt'
+        End
+        Else
+        Begin
+        set @SetUnitValue =  @calibration+' '+'CuFt'
+        End
+        End
+        insert into @TempTable(description,Name,MaxValueLimit,MeterTickUnit,calibration,UsageFactor)
+        values(@description, @Name,@MaxValueLimit,@SetUnitValue,@calibration,@UsageFactor)
+        FETCH NEXT FROM @MyCursor
+        INTO @description,@Name,@MaxValueLimit,@MeterTickUnit,@calibration,@UsageFactor
+        END
+        CLOSE @MyCursor
+        DEALLOCATE @MyCursor
+        select * from @TempTable
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC02_VerifyMetersData_Water" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>Meters</TableName>
+      <UniqueId>Description</UniqueId>
+      <Fields>Description,MeterType,MeterMask,Uofm,UsageFactor </Fields>
+      <Query>select Description,MeterType,MeterMask,Uofm,UsageFactor from meters where metertype like  '%Water'</Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.Meter</TableName>
+      <UniqueId>description</UniqueId>
+      <Fields>description,Name,MaxValueLimit,MeterTickUnit,UsageFactor </Fields>
+      <Query>
+        SELECT m.description,um.Name,m.MaxValueLimit,m.MeterTickUnit, 
+        CONVERT(DECIMAL(16,5), m.UsageFactor/1.0) as UsageFactor
+        FROM TCD.METER M left JOIN TCD.UtilityMaster UM ON UM.ResourceId=M.UtilityType
+        where m.UtilityType=2 order by m.MeterId asc
+      </Query>
+    </Target>
+  </MigrationTestStep>
+  <MigrationTestStep TestName="TC03_VerifyMetersData_Electric" Description="Migration DataBase">
+    <Source>
+      <DBName>Chino</DBName>
+      <TableName>Meters</TableName>
+      <UniqueId>Description</UniqueId>
+      <Fields>Description,MeterType,MeterMask,Uofm,UsageFactor</Fields>
+      <Query>select Description,MeterType,MeterMask,Uofm,UsageFactor from meters where metertype like  '%Electric' </Query>
+    </Source>
+    <Target>
+      <DBName>ConduitMigration</DBName>
+      <TableName>TCD.Meter</TableName>
+      <UniqueId>description</UniqueId>
+      <Fields>description,Name,MaxValueLimit,MeterTickUnit,UsageFactor</Fields>
+      <Query>
+        SELECT m.description,um.Name,m.MaxValueLimit,m.MeterTickUnit,
+        CONVERT(DECIMAL(16,5), m.UsageFactor/1.0) as UsageFactor
+        FROM TCD.METER M left JOIN TCD.UtilityMaster UM ON UM.ResourceId=M.UtilityType
+        where m.UtilityType=3 order by m.MeterId asc
+      </Query>
+    </Target>
+  </MigrationTestStep>
+</MigrationTest>

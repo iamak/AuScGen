@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Report";
+}
+<script src="~/Scripts/angular/v1.3.3/angular.js"></script>
+<script src="~/AuScGen/App/App.js"></script>
+<script src="~/AuScGen/Controllers/ReportController.js"></script>
+<h2 class="textColor">Report</h2>
+
+<div ng-controller="ReportsController">
+    <div class="row">
+        <div class="col-md-12">
+            <p><a href="#" ng-click="GetReportsDetails()">View Report</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11">
+            <ul data-ng-repeat="report in Reports">
+                <li><a href="{{report}}" target="_blank">{{report}}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+

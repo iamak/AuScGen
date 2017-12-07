@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Google Page">
+    <Element name="txtSearchEditBox" type="HtmlControl">
+      <name>q</name>
+    </Element>
+    <Element name="btnSearch" type="HtmlControl">
+      <name>btnG</name>
+    </Element>
+    <Element name="btnLogin" type="HtmlControl">
+      <id>signInLink</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Wash Step Formulas">
+    <Element name="tabFormula" type="HtmlControl">
+      <id>tabFormula</id>
+    </Element>
+    <Element name="lblWashStepLocalization" type="HtmlControl">
+      <xpath>//label[contains(text(),'Wash Step #')]</xpath>
+    </Element>
+    <Element name="lblErrMsgTemperature" type="HtmlControl">
+      <xpath>//label[contains(text(),'Temperature cannot be Empty.')]</xpath>
+    </Element>
+    <Element name="lblErrMsgWaterType" type="HtmlControl">
+      <xpath>//label[contains(text(),'Please select Water Type')]</xpath>
+    </Element>
+    <Element name="lblErrMsgRunTime" type="HtmlControl">
+      <xpath>//label[contains(text(),'Enter runtime in mm:ss format')]</xpath>
+    </Element>
+    <Element name="lblErrMsgWashOperation" type="HtmlControl">
+      <xpath>//label[contains(text(),'Please select Wash operation')]</xpath>
+    </Element>
+    <Element name="lblErrMsgWaterLevel" type="HtmlControl">
+      <xpath>//label[contains(text(),'Water level cannot be Empty.')]</xpath>
+    </Element>
+    <Element name="btnAddFormula" type="HtmlControl">
+      <xpath>//span[contains(text(),'Add Formula')]</xpath>
+    </Element>
+    <Element name="btnBackWashStep" type="HtmlControl">
+      <xpath>//span[contains(text(),'Back to Wash Steps')]</xpath>
+    </Element>
+    <Element name="errorMsgWashStep" type="HtmlInputText">
+      <id>errorDiv_msg</id>
+    </Element>
+    <Element name="btnSaveWashStep" type="HtmlButton">
+      <id>btnSaveWashStep</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="btnYesPopUpOnCancel" type="HtmlButton">
+      <id>imbYes</id>
+    </Element>
+    <Element name="txtWashStepNumber" type="HtmlInputText">
+      <id>txtWashStepNumber</id>
+    </Element>
+    <Element name="txtTemperature" type="HtmlInputText">
+      <id>txtTemperature</id>
+    </Element>
+    <Element name="ddlWaterTypes" type="HtmlSelect">
+      <id>ddlWaterTypes</id>
+    </Element>
+    <Element name="txtRunTime" type="HtmlInputText">
+      <id>txtRunTime</id>
+    </Element>
+    <Element name="ddlWashoperation" type="HtmlSelect">
+      <id>ddlWashoperation</id>
+    </Element>
+    <Element name="txtWaterLevel" type="HtmlInputText">
+      <id>txtWaterLevel</id>
+    </Element>
+    <Element name="txtNumber" type="HtmlInputText">
+      <id>txtNumber</id>
+    </Element>
+    <Element name="ddlFormulaName" type="HtmlSelect">
+      <id>ddlFormulaName</id>
+    </Element>
+    <Element name="txtNominalLoad" type="HtmlInputText">
+      <id>txtNominalLoad</id>
+    </Element>
+    <Element name="txtLoadsPerMonth" type="HtmlInputText">
+      <id>txtLoadsPerMonth</id>
+    </Element>
+    <Element name="txtExtraTime" type="HtmlInputText">
+      <id>txtExtraTime</id>
+    </Element>
+    <Element name="btnAddFormulaSave" type="HtmlButton">
+      <id>btnSave</id>
+    </Element>
+    <Element name="WashStepsTableGrid" type="HtmlControl">
+      <xpath>.//*[@id='tabAddWasherGroup']/div/div[7]/table</xpath>
+    </Element>
+    <Element name="WasherGroupFormulaTabelGrid" type="HtmlControl">
+      <xpath>.//*[@id='tabWasherGroupFormula']/div/div[3]/table</xpath>
+    </Element>
+    <Element name="btnPopUpCancel" type="HtmlButton">
+      <id>imbCancel</id>
+    </Element>
+    <Element name="btnPopUpOK" type="HtmlButton">
+      <id>imbOk</id>
+    </Element>
+    <Element name="btnAddWashStep" type="HtmlButton">
+      <id>btnAddWashStep</id>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="Washer Group controls">
+    <Element name="tabWasherGroup" type="HtmlControl">
+      <id>tabWashergroup</id>
+    </Element>
+    <Element name="SelectPreferredLanguage" type="HtmlControl">
+      <id>ddlLanguages</id>
+    </Element>
+    <Element name="btnUpload" type="HtmlInputButton">
+      <atribute>id=btnSave</atribute>
+    </Element>
+    <Element name="btnAddWasherGroup" type="HtmlButton">
+      <xpath>//span[contains(text(),'Add Washer Group')]</xpath>
+    </Element>
+    <Element name="lblSuccessMsg" type="HtmlControl">
+      <name>//*[@id="divMessage"]/label</name>
+    </Element>
+    <Element name="AddFinisherGroupSave" type="HtmlControl">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="AddFinisherGroupCancel" type="HtmlControl">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>
+  </FeatureSet>
+  <FeatureSet name="Add WasherGroup Controls">
+    <Element name="txtGroupNumber" type="HtmlInputText">
+      <id>txtGroupNumber</id>
+    </Element>
+    <Element name="txtGroupName" type="HtmlControl">
+      <id>txtGroupName</id>
+    </Element>
+    <Element name="ddlWasherGroupType" type="HtmlSelect">
+      <id>ddlWasherGroupType</id>
+    </Element>
+    <Element name="btnSave1" type="Htmlspan">
+      <xpath>//span[contains(text(),'Save')]</xpath>
+    </Element>
+    <Element name="btnSave" type="HtmlButton">
+      <id>btnAddEditWasherGroup</id>
+    </Element>
+    <Element name="btnBacktoWasherGroup" type="HtmlButton">
+      <id>bckbutton</id>
+    </Element>
+    <Element name="btnAddNewWasher" type="HtmlButton">
+      <id>btnAddNewWasher</id>
+    </Element>
+    <Element name="lblErrorMsg" type="HtmlControl">
+      <xpath>//*[@id="divMessage"]/label</xpath>
+    </Element>
+    <Element name="lblGroupNameErrorMsg " type="HtmlControl">
+      <xpath>//*[@id="tabAddWasherGroup"]/div/div[2]/div[4]/label</xpath>
+    </Element>
+    <Element name="SuccessValidationMessage" type="HtmlControl">
+      <class>k-success-message</class>
+    </Element>
+    <Element name="WasherGroupGridHeader" type="HtmlControl">
+      <xpath>.//*[@id='tblWasherGroups']/thead/tr</xpath>
+    </Element>
+    <Element name="WasherGroupGridTable" type="HtmlControl">
+      <xpath>.//*[@id='tabWasherGroupsListContainer']/div/div[2]/table</xpath>
+    </Element>
+    <Element name="lblViewAccessGroupName" type="HtmlControl">
+      <xpath>.//*[@id='tabAddWasherGroup']/div/div[2]/div[4]/label</xpath>
+    </Element>
+    <Element name="btnOkDelete" type="HtmlButton">
+      <xpath>//button[contains(text(),'Ok')]</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

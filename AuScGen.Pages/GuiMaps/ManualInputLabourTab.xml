@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Manual Inputs - Labour Tab Controls">
+    <Element name="SelectPreferredLanguage" type="HtmlControl">
+      <id>ddlLanguages</id>
+    </Element>
+    <Element name="btnUpload" type="HtmlInputButton">
+      <atribute>id=btnSave</atribute>
+    </Element>
+    <Element name="tabLabour" type="HtmlControl">
+      <id>tabLabour</id>
+    </Element>
+    <Element name="LabourTabGridTable" type="HtmlControl">
+      <xpath>.//*[@id='frmLaborData']/div[3]/table</xpath>
+    </Element>
+    <Element name="ddlLocation" type="HtmlSelect">
+      <id>ddlLocation</id>
+    </Element>
+    <Element name="ddlLaborTypes" type="HtmlSelect">
+      <id>ddlLaborTypes</id>
+    </Element>
+    <Element name="txtLaborCost" type="HtmlInputText">
+      <id>txtLaborCost</id>
+    </Element>
+    <Element name="txtStartDate" type="HtmlControl">
+      <id>txtStartDate</id>
+    </Element>
+    <Element name="startDateControl" type="HtmlControl">
+      <xpath>.//*[@id='tblMIRewash']/tbody/tr/td[2]/div/span</xpath>
+    </Element>
+    <Element name="txtEndDate" type="HtmlControl">
+      <id>txtEndDate</id>
+    </Element>
+    <Element name="endDateControl" type="HtmlControl">
+      <xpath>.//*[@id='frmLaborData']/div[1]/div/div[2]/div[5]/div/span/span</xpath>
+    </Element>
+    <Element name="txtAllocatedManHours" type="HtmlControl">
+      <id>txtNewAllocatedManHours</id>
+    </Element>
+    <Element name="btnSave" type="HtmlButton">
+      <id>btnSave</id>
+    </Element>
+    <Element name="btnCancel" type="HtmlButton">
+      <id>btnCancel</id>
+    </Element>
+    <Element name="errorMsg" type="HtmlLabel">
+      <id>errorMsg</id>
+    </Element>
+    <Element name="successMsg" type="HtmlControl">
+      <id>successMsg</id>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>

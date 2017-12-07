@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ObjectRepository>
+  <FeatureSet name="Pumps Page">
+    <Element name="tabPumpList" type="HtmlControl">
+      <id>tabPumpList</id>
+    </Element>
+    <Element name="ControllerSetupGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridControllerSetupList']/div[3]/table</xpath>
+    </Element>
+    <Element name="ControllerRoleSetupGridTable" type="HtmlControl">
+      <xpath>.//*[@id='gridControllerSetupList']/div[2]/table</xpath>
+    </Element>
+    <Element name="ddlSort" type="HtmlControl">
+      <id>ddlSort</id>
+    </Element>
+    <Element name="BacktoControllers" type="HtmlControl">
+      <xpath>//span[contains(text(),'Back to Controllers')]</xpath>
+    </Element>
+    <Element name="PumpsListTableGrid" type="HtmlControl">
+      <xpath>.//*[@id='tblPumpsList']</xpath>
+    </Element>
+    <Element name="ddlProducts" type="HtmlControl">
+      <id>ddlProducts</id>
+    </Element>
+    <Element name="txtPumpCalibration" type="HtmlControl">
+      <id>txtPumpCalibration</id>
+    </Element>
+    <Element name="txtMaxDosingTime" type="HtmlControl">
+      <id>txtMaxDosingTime</id>
+    </Element>
+    <Element name="SavePump" type="HtmlControl">
+      <id>btnSavePump</id>
+    </Element>
+    <Element name="CancelPump" type="HtmlControl">
+      <xpath>//button[contains(text(),'Cancel')]</xpath>
+    </Element>
+    <Element name="BacktoPumps" type="HtmlControl">
+      <xpath>//span[contains(text(),'Back to Pumps / Valves')]</xpath>
+    </Element>
+    <Element name="InLineddlProducts" type="HtmlControl">
+      <id>ddlProducts_1</id>
+    </Element>
+    <Element name="InLinetxtPumpCalibration" type="HtmlControl">
+      <id>pumpCalibration_1</id>
+    </Element>
+    <Element name="InLinetxtMaxDosingTime" type="HtmlControl">
+      <id>maximumDosingTime_1</id>
+    </Element>
+    <Element name="ValidationMessage" type="HtmlControl">
+      <id>massage</id>
+    </Element>
+    <Element name="dialogMsg" type="HtmlControl">
+      <xpath>//span[contains(text(),'Do you want to save changes?')]</xpath>
+    </Element>
+  </FeatureSet>
+</ObjectRepository>
